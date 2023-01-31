@@ -1,0 +1,182 @@
+.header {
+  height: 770px;
+  color: white;
+  background-image: url(/public/image/header-bak.png);
+}
+.wrapper {
+  max-width: 1280px;
+  margin: auto;
+  padding: 25px 30px 25px 25px;
+}
+.logo {
+  width: 90px;
+  height: 20px;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 180px;
+}
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  li {
+    box-sizing:content-box;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0px 50px;
+    padding: 5px 7px;
+    border-radius: 45px;
+    transition: 0.3s;
+   &:hover{
+    background-color: #665cd1;
+    font-size: 17px;
+   }
+  }
+}
+.button {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 15px;
+  color: white;
+
+  background: #665cd1;
+  box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
+  border-radius: 45px;
+  &:hover {
+    transition: 0.5s all;
+    position: relative;
+    background-color: #665cd1;
+    top: 1px;
+    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);}
+}
+.nav_languages {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  &::after,
+  &::before {
+    content: "";
+    height: 1px;
+    width: 5px;
+    background-color: white;
+    position: absolute;
+    top: 11px;
+  }
+  &::after {
+    left: 38px;
+    transform: rotate(-45deg);
+  }
+  &::before {
+    left: 35px;
+    transform: rotate(45deg);
+  }
+}
+.seaction {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  .title {
+    max-width: 510px;
+    margin-bottom: 115px;
+  }
+  p {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .seaction_buttons {
+    display: flex;
+    transition: 0.5s all;
+
+  }
+  .header_button {
+    text-align: center;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 40px 10px 15px;
+    color: white;
+    background: #665cd1;
+    box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
+    border-radius: 45px;
+    margin-right: 15px;
+    transition: 0.5s all;
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+      transition: 0.3s all;
+
+      height: 1.2px;
+      width: 7px;
+      background-color: white;
+      position: absolute;
+      top: 20px;
+    }
+    &::after {
+      top: 17px;
+      left: 204px;
+      transform: rotate(45deg);
+    }
+    &::before {
+      top: 22px;
+      left: 204px;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      transition: 0.5s all;
+      position: relative;
+      background-color: #665cd1;
+      top: 1px;
+      
+      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+      &::after {
+        top: 17px;
+        left: 208px;
+        transform: rotate(45deg);
+      }
+      &::before {
+        top: 22px;
+        left: 208px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .header_black_button {
+    color: white;
+    padding: 10px 15px;
+    background: #171717;
+    box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
+    border-radius: 45px;
+    transition: 0.5s all;
+
+    &:hover {
+      position: relative;
+      background-color: #665cd1;
+      top: 1px;
+      box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.445);
+    }
+  }
+}

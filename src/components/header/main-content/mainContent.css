@@ -1,0 +1,74 @@
+.advantages {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  box-sizing: content-box;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #665cd1;
+}
+
+.advatages_title {
+  margin-bottom: 20px;
+}
+
+.advantages_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.advantages_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fefefe;
+  box-shadow: 0px 3.33333px 14.6667px rgba(215, 215, 215, 0.47);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.ad_card_img {
+  background-image: url(/public/image/icons/all-in-one.svg);
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+}
+
+.ad_card_description {
+  width: 500px;
+}
+
+.ad_card_label {
+  margin-bottom: 10px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  /* identical to box height */
+  /* Black/500 */
+  color: #262626;
+}
+
+.ad_card_text {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* Black/500 */
+  color: #262626;
+}
