@@ -1,13 +1,11 @@
 .advantages {
   margin-top: 50px;
   margin-bottom: 30px;
+  padding: 0px 50px;
 }
-.wrapper{
-    -webkit-box-sizing: content-box;
-  box-sizing:content-box;
-    max-width: 1280px;
-    margin: auto;
-    
+.wrapper {
+  max-width: 1180px;
+  margin: auto;
 }
 .title {
   font-family: "Mulish";
@@ -16,10 +14,9 @@
   font-size: 24px;
   line-height: 30px;
   color: #665cd1;
-}
-.advatages_title {
   margin-bottom: 20px;
 }
+
 .advantages_content {
   display: flex;
   justify-content: space-between;
@@ -34,17 +31,21 @@
   box-shadow: 0px 3.33333px 14.6667px rgba(215, 215, 215, 0.47);
   border-radius: 15px;
   margin-bottom: 20px;
+  padding: 10px;
+}
+.reverse_card {
+  flex-direction: row-reverse;
 }
 .ad_card_img {
   background-image: url(/public/image/icons/all-in-one.svg);
   background-repeat: no-repeat;
-
   width: 120px;
   height: 120px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 .ad_card_description {
-  width: 500px;
+  width: 400px;
 }
 .ad_card_label {
   margin-bottom: 10px;
@@ -53,10 +54,6 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
-  /* identical to box height */
-
-  /* Black/500 */
-
   color: #262626;
 }
 .ad_card_text {
@@ -65,8 +62,438 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
+  color: #262626;
+}
+////////For whom we exist//////////////////////////////
+
+.exist {
+  margin-bottom: 50px;
+  padding: 0px 50px;
+}
+.exist_content {
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.exist_left_part {
+  .exist_list {
+    margin-left: 30px;
+    li {
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #262626;
+      margin-bottom: 15px;
+      position: relative;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      &::before {
+        content: "";
+        background-image: url(/public/image/icons/list-img.svg);
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: -30px;
+      }
+    }
+  }
+}
+.exist_right_part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.exist_left_words,
+.exist_right_words {
+  display: flex;
+  flex-direction: column;
+}
+.m {
+  background-image: url(/public/image/icons/m.svg);
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 10px;
+}
+.oo {
+  background-image: url(/public/image/icons/os.svg);
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+
+  height: 20px;
+  width: 20px;
+}
+.o {
+  background-image: url(/public/image/icons/o.svg);
+  background-repeat: no-repeat;
+  height: 20px;
+  margin-bottom: 10px;
+  width: 20px;
+}
+.w {
+  background-image: url(/public/image/icons/w.svg);
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  height: 20px;
+  width: 20px;
+}
+.last_word {
+  margin: 0;
+}
+.exist_offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+}
+.offer_title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #262626;
+}
+.offer_button {
+  display: block;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f1f0ff;
+  background: #665cd1;
+  color: white;
+  padding: 10px 15px;
+  box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
+  border-radius: 45px;
+  margin: 20px 0px;
+}
+.ofer_download_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.google_play {
+  background-image: url(/public/image/icons/google-play.png);
+  width: 130px;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+.app_store {
+  background-image: url(/public/image/icons/app-store.png);
+  width: 130px;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+
+////////Statistics//////////////////////////////
+.statistics {
+  margin-bottom: 30px;
+}
+.statistik_label {
+  margin-bottom: 20px;
+  h2 {
+    max-width: 430px;
+  }
+  width: 535px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: #171717;
+  p {
+    font-size: 11px;
+    line-height: 14px;
+    color: #7e7e7e;
+  }
+}
+.statistic_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.statistic_card {
+  padding: 10px;
+  background: #fefefe;
+  box-shadow: 0px 1.33333px 11.3333px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+}
+.stat_card_label {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #262626;
+  margin-bottom: 15px;
+}
+.stat_card_top_list {
+  margin-bottom: 15px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #262626;
+  li {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 14px;
+      color: #665cd1;
+      background: #f1f0ff;
+      border-radius: 42px;
+      padding: 3px 6px;
+      margin-right: 5px;
+    }
+  }
+}
+.stat_card_at_ukraine {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #262626;
+  span {
+    color: #665cd1;
+  }
+}
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.map_label {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #5a5a5a;
+  margin-bottom: 7px;
+}
+.active_map {
+  margin-bottom: 30px;
+}
+.map_active_block {
+  position: absolute;
+  width: 260px;
+  height: 93px;
+  background-color: aquamarine;
+
+  overflow: hidden;
+  background: #fefefe;
+
+  border: 2px solid #665cd1;
+  border-radius: 10px;
+}
+.map_button {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f1f0ff;
+  padding: 10px 15px;
+  background: #665cd1;
+  box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
+  border-radius: 45px;
+}
+////////AboutMoow//////////////////////////////
+.about {
+  margin-bottom: 20px;
+}
+.about_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.about_margin {
+  margin-bottom: 10px;
+}
+.about_video {
+  margin: 0px 25px;
+  background-image: url(/public/image/about-video.png);
+  width: 700px;
+  height: 350px;
+  border: 3px solid #f1f0ff;
+  border-radius: 15px;
+}
+////////Discount//////////////////////////////
+.discounts {
+  margin-bottom: 20px;
+  padding: 20px 50px;
+  background: #f1f0ff;
+}
+.discounts_content {
+}
+.swiper_slide {
+  padding-top: 11px;
+  width: 260px;
+  height: 200px;
+}
+.slide_image {
+  overflow: visible;
+  img {
+    border-radius: 24px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  position: relative;
+}
+.advertised {
+  top: 7px;
+  left: 7px;
+  position: absolute;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12.6667px;
+  line-height: 16px;
+  display: inline-block;
+  text-align: center;
+
+  padding: 3px 10px;
+
+  color: #665cd1;
+  background: #f1f0ff;
+  border-radius: 5.33333px;
+}
+.certified {
+  background-image: url(/public/image/icons/certified.svg);
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  z-index: 5;
+}
+.cheked {
+  top: 35px;
+  left: 7px;
+  position: absolute;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12.6667px;
+  line-height: 16px;
+  padding: 3px 10px;
+  text-align: center;
+  display: inline-block;
+  background: rgba(33, 217, 41, 0.5);
+  border-radius: 5px;
+  color: #f1f0ff;
+  transition: 0.5s;
+  &:hover {
+    background: rgba(33, 217, 41, 0.8);
+  }
+}
+.slide_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slide_main_info {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
 
   /* Black/500 */
 
   color: #262626;
+}
+.slide_price {
+  position: relative;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #665cd1;
+  span {
+    position: absolute;
+    display: inline-block;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 13px;
+
+    color: #5a5a5a;
+  }
+}
+.slide_more_info {
+}
+.slide_rating {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+
+  text-align: right;
+
+  color: #5a5a5a;
+  position: relative;
+  &::before {
+    content: "";
+    top: -2px;
+    left: 0px;
+    position: absolute;
+    background-image: url(/public/image/icons/star.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+  }
+}
+.slide_views {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+
+  color: #5a5a5a;
+  position: relative;
+  &::before {
+    content: "";
+    top: 1px;
+    left: -12px;
+    position: absolute;
+    background-image: url(/public/image/icons/views.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+  }
 }

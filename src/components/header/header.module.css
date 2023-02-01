@@ -59,7 +59,6 @@
   background: #665cd1;
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
-  transition: 0.5s all;
 }
 .button:hover {
   transition: 0.5s all;
