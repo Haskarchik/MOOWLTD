@@ -5,9 +5,13 @@ import HederContent from './HederContent';
 const Header = () => {
     return (
       <header className={headerStyle.header}>
+        <div className="wrapper">
+
+       
         <div className={headerStyle.wrapper}>
         <HeaderNavigation/> 
         <HederContent/>
+        </div>
         </div>
       </header>
     );

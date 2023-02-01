@@ -2,6 +2,8 @@
   height: 770px;
   color: white;
   background-image: url(/public/image/header-bak.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .wrapper {
