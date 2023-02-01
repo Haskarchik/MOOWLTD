@@ -180,3 +180,10 @@
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
 }
+.footer_web_button:hover {
+  transition: 0.5s;
+  position: relative;
+  background-color: #665cd1;
+  top: 1px;
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+}
