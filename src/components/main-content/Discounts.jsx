@@ -15,8 +15,7 @@ export default function () {
             autoplay={{
               delay: 500,
             }}
-           
-       
+                  
             loop={true}
             direction="horizontal"
             spaceBetween={0}

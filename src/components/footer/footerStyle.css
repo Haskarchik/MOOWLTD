@@ -22,13 +22,26 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
+  padding-left: 25px;
   align-items: flex-start;
+  position: relative;
   color: #262626;
+}
+.footet_pages::before {
+  content: "";
+  background-image: url(/public/image/icons/os-black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 .footet_pages .footet_pages_list {
   margin-top: 10px;
 }
-.footet_pages .footet_pages_list li {
+.footet_pages li {
   font-family: "Mulish";
   font-style: normal;
   font-weight: 500;
@@ -48,7 +61,19 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
+  position: relative;
   color: #262626;
+}
+.footer_contacts::before {
+  content: "";
+  background-image: url(/public/image/icons/os-black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0px;
+  left: -25px;
 }
 .footer_contacts .footer_contacts_list {
   margin-top: 10px;
@@ -74,9 +99,84 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
+  position: relative;
+}
+.footer_socials::before {
+  content: "";
+  background-image: url(/public/image/icons/os-black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0px;
+  left: -25px;
 }
 .footer_socials .socials {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.footer_documents {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+}
+.footer_documents::before {
+  content: "";
+  background-image: url(/public/image/icons/os-black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0px;
+  left: -25px;
+}
+
+.footer_app_or_web {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_app_or_web_title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+  /* Black/500 */
+  color: #262626;
+}
+
+.footer_app_or_web_buttons {
+  display: flex;
+}
+
+.footer_app_or_web_subtitle {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #262626;
+  margin-bottom: 20px;
+}
+
+.footer_web_button {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 15px;
+  color: #F1F0FF;
+  background: #665CD1;
+  box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
+  border-radius: 45px;
 }

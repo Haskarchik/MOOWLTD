@@ -46,7 +46,9 @@ const Footer = () => {
               <a className="youtoube" href="#"></a>
             </div>
           </div>
-          <div className="footer_documents"></div>
+          <div className="footer_documents">
+            Документи
+          </div>
           <div className="footer_app_or_web">
             <div className="footer_app_or_web_title">
               Встанови безкоштовний додаток на смартфон

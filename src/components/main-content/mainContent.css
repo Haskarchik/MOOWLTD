@@ -36,18 +36,75 @@
   margin-bottom: 20px;
   padding: 10px;
 }
+.advantages_card:hover {
+  transition: 0.5s;
+  box-shadow: 0px 3.33333px 14.6667px rgba(161, 159, 159, 0.562);
+}
+.advantages_card:hover .advantages_card_loop {
+  transition: 0.5s;
+  transform: rotate(360deg);
+}
+.advantages_card:hover .advantages_card_chek_mark {
+  transition: 0.5s;
+  height: 15px;
+  opacity: 1;
+}
+.advantages_card:hover .under_hand_button {
+  transition: 0.5s;
+  top: 21px;
+  left: 5px;
+}
+.advantages_card:hover .under_hand_button .under_hand_button_inside {
+  transition: 0.3s;
+  fill: #665cd1;
+}
+.advantages_card:hover .under_hand_button .under_hand_button_around,
+.advantages_card:hover .under_hand_button .under_hand_button_center {
+  transition: 0.3s;
+  fill: #fefefe;
+}
+.advantages_card:hover .hand {
+  transition: 0.3s;
+  top: 43px;
+  left: 19px;
+}
 
 .reverse_card {
   flex-direction: row-reverse;
 }
 
 .ad_card_img {
-  background-image: url(/public/image/icons/all-in-one.svg);
-  background-repeat: no-repeat;
   width: 120px;
   height: 120px;
   margin-right: 10px;
   margin-left: 10px;
+  position: relative;
+}
+
+.advantages_card_loop {
+  position: absolute;
+  top: 49px;
+  left: 24px;
+}
+
+.advantages_card_chek_mark {
+  position: absolute;
+  bottom: 16px;
+  right: 49px;
+  opacity: 0.5;
+  height: 1px;
+}
+
+.under_hand_button {
+  position: absolute;
+  top: 21px;
+  left: 5px;
+}
+
+.hand {
+  position: absolute;
+  top: 45px;
+  left: 22px;
 }
 
 .ad_card_description {
@@ -160,11 +217,12 @@
 }
 
 .exist_offer {
+  margin: 0px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 500px;
+  width: 501px;
 }
 
 .offer_title {
@@ -191,6 +249,14 @@
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
   margin: 20px 0px;
+  transition: 1s;
+}
+.offer_button:hover {
+  transition: 1s;
+  position: relative;
+  background-color: #665cd1;
+  top: 1px;
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
 }
 
 .ofer_download_buttons {
@@ -202,16 +268,25 @@
 
 .google_play {
   background-image: url(/public/image/icons/google-play.png);
-  width: 130px;
-  height: 50px;
+  width: 113px;
+  height: 33px;
   background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 45px;
+}
+.google_play:hover {
+  box-shadow: 1px 2px 20px rgba(56, 0, 88, 0.363);
 }
 
 .app_store {
   background-image: url(/public/image/icons/app-store.png);
-  width: 130px;
-  height: 50px;
+  width: 113px;
+  height: 33px;
   background-repeat: no-repeat;
+  background-position: center;
+}
+.app_store:hover {
+  box-shadow: 1px 2px 20px rgba(56, 0, 88, 0.363);
 }
 
 .statistics {
@@ -347,6 +422,13 @@
   background: #665cd1;
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
+}
+.map_button:hover {
+  transition: 1s;
+  position: relative;
+  background-color: #665cd1;
+  top: 1px;
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
 }
 
 .about {
@@ -541,6 +623,12 @@
   box-shadow: 0px 1.33333px 11.3333px rgba(0, 0, 0, 0.09);
   border-radius: 15px;
   display: flex;
+}
+.reg_card:hover {
+  transition: 0.5s;
+  position: relative;
+  top: 1px;
+  box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.315);
 }
 
 .reg_card_content {
@@ -782,6 +870,13 @@
   line-height: 20px;
   color: #f1f0ff;
 }
+.question_buttons .go_faq:hover {
+  transition: 0.5s;
+  position: relative;
+  background-color: #665cd1;
+  top: 1px;
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+}
 .question_buttons .go_bot {
   font-family: "Mulish";
   font-style: normal;
@@ -791,8 +886,15 @@
   color: #f1f0ff;
   padding: 10px 15px;
   background: #665cd1;
-  box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
+  box-shadow: 0px 4px 10px rgba(111, 98, 228, 0.945);
   border-radius: 45px;
+}
+.question_buttons .go_bot:hover {
+  transition: 0.5s;
+  position: relative;
+  background-color: #665cd1;
+  top: 1px;
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
 }
 
 .question_text {
@@ -813,7 +915,10 @@
   flex-direction: column;
   align-items: center;
   padding: 25px 50px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url(/public/image/app-or-web-back.jfif);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url(/public/image/app-or-web-back.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -824,6 +929,7 @@
   font-size: 24px;
   line-height: 30px;
   color: #f1f0ff;
+  margin-bottom: 10px;
 }
 
 .app_or_web_subtitle {
@@ -851,6 +957,13 @@
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
 }
+.app_or_web_buttot_web a:hover {
+  transition: 0.5s;
+  position: relative;
+  background-color: #665cd1;
+  top: 1px;
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+}
 
 .app_or_web_app {
   width: 675px;
@@ -871,5 +984,9 @@
   border-radius: 45px;
 }
 .app_or_web_app .app_or_web_buttot_app:hover {
-  box-shadow: 0px 5px 7px rgba(111, 98, 228, 0.336);
+  transition: 0.5s;
+  position: relative;
+  background-color: #665cd1;
+  top: 1px;
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
 }
