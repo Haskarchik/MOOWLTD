@@ -8,7 +8,7 @@ export default function (props) {
   }else{
     first.current=' '
   }
-  console.log( first.current);
+ 
   return (
     <section className={"exist " + first.current}>
       <div className="wrapper">

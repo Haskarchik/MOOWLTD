@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .advantages {
   margin-top: 50px;
   margin-bottom: 30px;
@@ -32,6 +33,49 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+@-webkit-keyframes all_in_one {
+  0% {
+    /* css свойства */
+  }
+  100% {
+    /* css свойства */
+  }
+}
+
+@keyframes all_in_one {
+  0% {
+    /* css свойства */
+  }
+  100% {
+    /* css свойства */
+  }
+}
+.cirkle {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.message {
+  position: absolute;
+  top: -15px;
+  left: -25px;
+}
+
+.carculator {
+  position: absolute;
+  top: -2px;
+  left: -16px;
+}
+
+.box {
+  position: absolute;
+  top: -9px;
+  left: 4px;
 }
 
 .advantages_card {
