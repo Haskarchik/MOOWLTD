@@ -436,12 +436,13 @@ const Imfo = (props) => {
       break;
   }
 
-  let udaptivePoints = 1605;
+  let udaptivePointsY = 2005;
+  let udaptivePointsX = 455;
 
   let div = (
     <div
       className="map_active_block"
-      style={{ top: props.regionY - udaptivePoints, left: props.regionX }}
+      style={{ top: props.regionY - udaptivePointsY, left: props.regionX  - udaptivePointsX }}
     >
       {onMapData.current}
     </div>

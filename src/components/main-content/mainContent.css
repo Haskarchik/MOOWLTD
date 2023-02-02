@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .advantages {
   margin-top: 50px;
   margin-bottom: 30px;
@@ -41,16 +40,20 @@
     left: 4px;
   }
   25% {
-    top: 10px;
-    left: -4px;
-  }
-  50% {
-    top: 27px;
+    top: 30px;
     left: -30px;
   }
+  50% {
+    top: -9px;
+    left: -80px;
+  }
+  75% {
+    top: -55px;
+    left: -35px;
+  }
   100% {
-    top: 13px;
-    left: -74px;
+    top: -9px;
+    left: 4px;
   }
 }
 
@@ -60,48 +63,108 @@
     left: 4px;
   }
   25% {
-    top: 10px;
-    left: -4px;
-  }
-  50% {
-    top: 27px;
+    top: 30px;
     left: -30px;
   }
+  50% {
+    top: -9px;
+    left: -80px;
+  }
+  75% {
+    top: -55px;
+    left: -35px;
+  }
   100% {
-    top: 13px;
-    left: -74px;
+    top: -9px;
+    left: 4px;
   }
 }
 @-webkit-keyframes anim_message {
   0% {
-    /* css свойства */
+    top: -15px;
+    left: -25px;
+  }
+  25% {
+    top: -12px;
+    left: 42px;
+  }
+  50% {
+    top: 55px;
+    left: 26px;
+  }
+  75% {
+    top: 28px;
+    left: -47px;
   }
   100% {
-    /* css свойства */
+    top: -15px;
+    left: -25px;
   }
 }
 @keyframes anim_message {
   0% {
-    /* css свойства */
+    top: -15px;
+    left: -25px;
+  }
+  25% {
+    top: -12px;
+    left: 42px;
+  }
+  50% {
+    top: 55px;
+    left: 26px;
+  }
+  75% {
+    top: 28px;
+    left: -47px;
   }
   100% {
-    /* css свойства */
+    top: -15px;
+    left: -25px;
   }
 }
 @-webkit-keyframes anim_carculator {
   0% {
-    /* css свойства */
+    top: -2px;
+    left: -16px;
+  }
+  25% {
+    top: -62px;
+    left: -18px;
+  }
+  50% {
+    top: -65px;
+    left: 60px;
+  }
+  75% {
+    top: -6px;
+    left: 57px;
   }
   100% {
-    /* css свойства */
+    top: -2px;
+    left: -16px;
   }
 }
 @keyframes anim_carculator {
   0% {
-    /* css свойства */
+    top: -2px;
+    left: -16px;
+  }
+  25% {
+    top: -62px;
+    left: -18px;
+  }
+  50% {
+    top: -65px;
+    left: 60px;
+  }
+  75% {
+    top: -6px;
+    left: 57px;
   }
   100% {
-    /* css свойства */
+    top: -2px;
+    left: -16px;
   }
 }
 .cirkle {
@@ -172,17 +235,23 @@
   top: 43px;
   left: 19px;
 }
-.advantages_card:hover .circle {
-  -webkit-animation-name: all_in_one;
-          animation-name: all_in_one;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+.advantages_card:hover .message {
+  -webkit-animation-name: anim_message;
+          animation-name: anim_message;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
 }
 .advantages_card:hover .box {
   -webkit-animation-name: anim_box;
           animation-name: anim_box;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+.advantages_card:hover .carculator {
+  -webkit-animation-name: anim_carculator;
+          animation-name: anim_carculator;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
 }
 
 .reverse_card {
@@ -249,6 +318,7 @@
 .exist {
   margin-bottom: 50px;
   padding: 0px 50px;
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
@@ -415,6 +485,7 @@
 
 .statistics {
   margin-bottom: 30px;
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
@@ -516,6 +587,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.map.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .map_label {
@@ -530,6 +609,7 @@
 
 .active_map {
   margin-bottom: 30px;
+  position: relative;
 }
 
 .map_active_block {
@@ -562,7 +642,7 @@
   color: #000000;
 }
 .region_info li span {
-  color: #665CD1;
+  color: #665cd1;
 }
 
 .map_button {
@@ -587,6 +667,7 @@
 
 .about {
   margin-bottom: 20px;
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
@@ -620,6 +701,7 @@
   margin-bottom: 50px;
   padding: 20px 50px;
   background: #f1f0ff;
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
@@ -635,7 +717,42 @@
   width: 260px;
   height: 200px;
 }
+.swiper_slide:hover .advertised {
+  -webkit-animation-name: anim_advertised;
+          animation-name: anim_advertised;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.swiper_slide:hover .cheked {
+  -webkit-animation-name: anim_advertised;
+          animation-name: anim_advertised;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
 
+@-webkit-keyframes anim_advertised {
+  0% {
+    padding: 3px 10px;
+  }
+  50% {
+    padding: 5px 15px;
+  }
+  100% {
+    padding: 3px 10px;
+  }
+}
+
+@keyframes anim_advertised {
+  0% {
+    padding: 3px 10px;
+  }
+  50% {
+    padding: 5px 15px;
+  }
+  100% {
+    padding: 3px 10px;
+  }
+}
 .slide_image {
   overflow: visible;
   position: relative;
@@ -777,6 +894,7 @@
 
 .registration {
   margin-bottom: 50px;
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
@@ -835,6 +953,7 @@
 
 .eazy {
   margin-bottom: 50px;
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
@@ -902,6 +1021,7 @@
 .driver {
   margin-bottom: 50px;
   color: #ebebeb;
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
@@ -1023,6 +1143,7 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
@@ -1040,6 +1161,10 @@
   background: #fefefe;
   box-shadow: 0px 3.33333px 14.6667px rgba(215, 215, 215, 0.47);
   border-radius: 15px;
+  transition: 0.3s;
+}
+.question_content:hover {
+  box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.315);
 }
 
 .question_content_subtitle {
@@ -1105,10 +1230,12 @@
   font-size: 14px;
   line-height: 18px;
   color: #5a5a5a;
+  transition: 0.3s;
 }
 
 .app_or_web {
   margin-bottom: 50px;
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;

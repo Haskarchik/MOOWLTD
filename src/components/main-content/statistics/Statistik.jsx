@@ -1,7 +1,19 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Map from "./Map";
 import "../mainContent.css";
 export default function Statistik(props) {
+
+  const [scroll, setscroll] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  function handleScroll() {
+    setscroll(window.scrollY);
+  }
+
   const show = useRef()
   if(props.show){
     show.current='show'
@@ -62,8 +74,9 @@ export default function Statistik(props) {
               </div>
             </div>
           </div>
-        </div>
-        <Map/>
+        </div> 
+        {scroll >1000 ? <Map show={"show"} /> : <Map/>}
+        
       </div>
     </section>
   );

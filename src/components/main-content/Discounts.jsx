@@ -5,11 +5,11 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 export default function (props) {
-  const show = useRef()
-  if(props.show){
-    show.current='show'
-  }else{
-    show.current=' '
+  const show = useRef();
+  if (props.show) {
+    show.current = "show";
+  } else {
+    show.current = " ";
   }
   return (
     <section className={"discounts " + show.current}>
@@ -17,16 +17,16 @@ export default function (props) {
         <div className="title">Знижка на послуги MOOW до 12.12</div>
         <div className="discounts_content">
           <Swiper
-           modules={[Autoplay]}
+            modules={[Autoplay]}
             autoplay={{
-              delay: 500,
+              delay: 2000,
+              disableOnInteraction: false,
             }}
-                  
+            slidesPerView={4}
             loop={true}
             direction="horizontal"
             spaceBetween={0}
-            loopedSlides={1}
-            slidesPerView={3}
+            loopedSlides={4}
             onSlideChange={() => console.log()}
             onSwiper={(swiper) => console.log()}
           >
@@ -35,7 +35,6 @@ export default function (props) {
                 <div className="slide_image">
                   <img src="/image/first-slide.png" alt="" />
                   <div className="advertised">Рекламовано</div>
-                  <div className="cheked"> Перевірено</div>
 
                   <div className="certified"></div>
                 </div>
@@ -81,7 +80,6 @@ export default function (props) {
                 <div className="slide_image">
                   <img src="/image/third-slide.png" alt="" />
                   <div className="advertised">Рекламовано</div>
-                  <div className="cheked"> Перевірено</div>
 
                   <div className="certified"></div>
                 </div>
@@ -104,7 +102,362 @@ export default function (props) {
                 <div className="slide_image">
                   <img src="/image/four-slide.png" alt="" />
                   <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/first-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/second-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
                   <div className="cheked"> Перевірено</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/third-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/four-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>{" "}
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/first-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/second-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+                  <div className="cheked"> Перевірено</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/third-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/four-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>{" "}
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/first-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/second-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+                  <div className="cheked"> Перевірено</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/third-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/four-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>{" "}
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/first-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/second-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+                  <div className="cheked"> Перевірено</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/third-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
+
+                  <div className="certified"></div>
+                </div>
+                <div className="slide_info">
+                  <div className="slide_main_info">
+                    <h2>Склад 1</h2>
+                    <div className="slide_price">
+                      300 грн/кв.м. <span>Мін.ціна</span>
+                    </div>
+                  </div>
+                  <div className="slide_more_info">
+                    <div className="slide_rating">4.8</div>
+                    <div className="slide_views">12 тис</div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper_slide">
+                <div className="slide_image">
+                  <img src="/image/four-slide.png" alt="" />
+                  <div className="advertised">Рекламовано</div>
 
                   <div className="certified"></div>
                 </div>

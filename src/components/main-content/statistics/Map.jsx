@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Info from "./Info";
 
-export default function Map() {
+export default function Map(props) {
   const [InfoBlok, setInfoBlok] = useState();
+
+  const show = useRef()
+  if(props.show){
+    show.current='show'
+  }else{
+    show.current=' '
+  }
+
+
   const occupiedTerritory = "#EBEBEB";
   const defaultTerritory = "#F1F0FF";
+
+
 
   function mouseEnter(e) {
     e.currentTarget.style.fill = "#9D97E2";
@@ -383,7 +394,7 @@ export default function Map() {
     </svg>
   );
   return (
-    <div className="map">
+    <div className={"map " + show.current}>
       <div className="map_label">
         Наведіть на потрібну область, щоб побачити дані
       </div>

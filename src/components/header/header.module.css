@@ -38,15 +38,14 @@
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
   margin: 0px 50px;
-  padding: 5px 7px;
+  padding: 5px 10px;
   border-radius: 45px;
   transition: 0.3s;
 }
 .nav_list li:hover {
   background-color: #665cd1;
-  font-size: 17px;
 }
 
 .button {
@@ -70,11 +69,16 @@
 }
 
 .nav_languages {
+  cursor: pointer;
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  position: relative;
+  transition: 0.3s;
+  border-radius: 15px;
+  padding: 7px 15px;
   position: relative;
 }
 .nav_languages::after, .nav_languages::before {
@@ -83,15 +87,76 @@
   width: 5px;
   background-color: white;
   position: absolute;
-  top: 11px;
+  transition: 0.3s;
+  top: 18px;
 }
 .nav_languages::after {
-  left: 38px;
+  left: 50px;
   transform: rotate(-45deg);
 }
 .nav_languages::before {
-  left: 35px;
+  left: 47px;
   transform: rotate(45deg);
+}
+
+.nav_languages_active {
+  cursor: pointer;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  border-radius: 15px;
+  transition: 0.3s;
+  padding: 7px 15px;
+  background-color: #665cd1;
+  position: relative;
+}
+.nav_languages_active::after, .nav_languages_active::before {
+  content: "";
+  height: 1px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  transition: 0.3s;
+  top: 18px;
+}
+.nav_languages_active::after {
+  left: 50px;
+  transition: 0.3s;
+  transform: rotate(45deg);
+}
+.nav_languages_active::before {
+  left: 47px;
+  transition: 0.3s;
+  transform: rotate(-45deg);
+}
+.nav_languages_active .nav_languages_block {
+  border-radius: 15px;
+  transition: 0.5s;
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  background-color: #665cd1;
+}
+
+.nav_languages_ua {
+  border-radius: 15px;
+  padding: 7px 15px;
+  border-bottom: 1px solid grey;
+}
+.nav_languages_ua:hover {
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.336);
+}
+
+.nav_languages_eng {
+  border-radius: 15px;
+  padding: 7px 15px;
+  border-bottom: 1px solid grey;
+}
+.nav_languages_eng:hover {
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.336);
 }
 
 .seaction {

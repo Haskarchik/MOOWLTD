@@ -12,6 +12,7 @@ import Question from "./components/main-content/Question";
 import AppOrWeb from "./components/main-content/AppOrWeb";
 import Footer from "./components/footer/Footer";
 import { useEffect, useRef, useState } from "react";
+import Modal from "./components/Modal";
 
 function App() {
   const [scroll, setscroll] = useState(0);
@@ -28,8 +29,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-
-      {scroll > 55 ? <Advantages show={"show"} /> : <Advantages />}
+      <Advantages show={"show"} />
       {scroll > 550 ? <ForWhomWeExist show={"show"} /> : <ForWhomWeExist />}
       {scroll > 750 ? <Statistik show={"show"} /> : <Statistik />}
       {scroll > 1900 ? <AboutMoow show={"show"} /> : <AboutMoow />}

@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import "./footerStyle.css";
+import Modal from "../Modal";
 const Footer = () => {
-  const [popupIsOpen, setPopupIsOpen] = useState();
+  const [modalActive, setModalActive] = useState();
 
-  function documentOpen() {
-    setPopupIsOpen(true);
-  }
   return (
     <footer className="footer">
       <div className="wrapper">
@@ -57,9 +55,11 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="footer_documents" onClick={documentOpen}>
+          <div
+            className="footer_documents"
+            onClick={() => setModalActive(true)}
+          >
             Документи
-            {popupIsOpen }
           </div>
           <div className="footer_app_or_web">
             <div className="footer_app_or_web_title">
@@ -81,7 +81,11 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        <div className="copyright">
+          ©ТОВ «Діджітал інвест адвайзор», 2021-2023
+        </div>
       </div>
+      <Modal active={modalActive} setActive={() => setModalActive(false)} />
     </footer>
   );
 };

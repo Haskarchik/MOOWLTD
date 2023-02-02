@@ -32,9 +32,9 @@ export default function AboutMoow(props) {
             height="620"
             src="https://www.youtube.com/embed/zrYwgSek_AE"
             title="🇺🇦 MOISSON XXL en UKRAINE sur 12 000 ha chez AGRO KMR | CTF 😲"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
          
           <div className="exist_right_words">

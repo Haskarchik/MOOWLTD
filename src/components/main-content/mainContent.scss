@@ -6,11 +6,10 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 .wrapper {
@@ -33,60 +32,104 @@
   align-items: center;
   flex-wrap: wrap;
 }
-@keyframes anim_box  {
+@keyframes anim_box {
   0% {
     top: -9px;
     left: 4px;
   }
-  25%{
-    top: 10px;
-    left: -4px;
+
+  25% {
+    top: 30px;
+    left: -30px;
   }
-50%{
-  top: 27px;
-  left: -30px;
-}
+
+  50% {
+    top: -9px;
+    left: -80px;
+  }
+
+  75% {
+    top: -55px;
+    left: -35px;
+  }
+
   100% {
-    top: 13px;
-    left: -74px;
+    top: -9px;
+    left: 4px;
   }
 }
 
 @keyframes anim_message {
   0% {
-    /* css свойства */
+    top: -15px;
+    left: -25px;
   }
+
+  25% {
+    top: -12px;
+    left: 42px;
+  }
+
+  50% {
+    top: 55px;
+    left: 26px;
+  }
+
+  75% {
+    top: 28px;
+    left: -47px;
+  }
+
   100% {
-    /* css свойства */
+    top: -15px;
+    left: -25px;
   }
 }
 @keyframes anim_carculator {
   0% {
-    /* css свойства */
+    top: -2px;
+    left: -16px;
   }
+
+  25% {
+    top: -62px;
+    left: -18px;
+  }
+
+  50% {
+    top: -65px;
+    left: 60px;
+  }
+
+  75% {
+    top: -6px;
+    left: 57px;
+  }
+
   100% {
-    /* css свойства */
+    top: -2px;
+    left: -16px;
   }
 }
-  
-.cirkle{
+
+.cirkle {
   height: 100px;
   width: 100px;
   position: absolute;
   top: 0px;
   left: 0px;
 }
-.message{
+.message {
   position: absolute;
   top: -15px;
   left: -25px;
 }
-.carculator{
+.carculator {
   position: absolute;
   top: -2px;
   left: -16px;
 }
-.box{
+.box {
   position: absolute;
   top: -9px;
   left: 4px;
@@ -136,13 +179,17 @@
       top: 43px;
       left: 19px;
     }
-    .circle{
-      animation-name: all_in_one;
-      animation-duration: 1s;
+    .message {
+      animation-name: anim_message;
+      animation-duration: 1.2s;
     }
-    .box{
+    .box {
       animation-name: anim_box;
-      animation-duration: 1s;
+      animation-duration: 1.2s;
+    }
+    .carculator {
+      animation-name: anim_carculator;
+      animation-duration: 1.2s;
     }
   }
 }
@@ -204,15 +251,14 @@
 .exist {
   margin-bottom: 50px;
   padding: 0px 50px;
-
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 .exist_content {
@@ -361,15 +407,14 @@
 ////////Statistics//////////////////////////////
 .statistics {
   margin-bottom: 30px;
-  
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 .statistik_label {
@@ -458,7 +503,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
+
 .map_label {
   font-family: "Mulish";
   font-style: normal;
@@ -470,6 +524,7 @@
 }
 .active_map {
   margin-bottom: 30px;
+  position: relative;
 }
 .map_active_block {
   position: absolute;
@@ -477,31 +532,31 @@
   max-height: 93px;
   transition: 0.3s;
   background: #fefefe;
-padding: 8px 10px;
+  padding: 8px 10px;
   border: 2px solid #665cd1;
   border-radius: 10px;
 }
-.map_active_block_label{
-  font-family: 'Mulish';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 18px;
-margin-bottom: 5px;
-color: #000000;
+.map_active_block_label {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 5px;
+  color: #000000;
 }
-.region_info{
-  font-family: 'Mulish';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-li{
-  span{
-    color: #665CD1;
+.region_info {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  li {
+    span {
+      color: #665cd1;
+    }
   }
-}
-color: #000000;
+  color: #000000;
 }
 .map_button {
   font-family: "Mulish";
@@ -525,15 +580,14 @@ color: #000000;
 ////////AboutMoow//////////////////////////////
 .about {
   margin-bottom: 20px;
-  
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 .about_content {
@@ -547,7 +601,7 @@ color: #000000;
 }
 .about_video {
   margin: 0px 25px;
- 
+
   width: 700px;
   height: 350px;
   border: 3px solid #f1f0ff;
@@ -558,15 +612,14 @@ color: #000000;
   margin-bottom: 50px;
   padding: 20px 50px;
   background: #f1f0ff;
-  
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 
@@ -574,9 +627,31 @@ color: #000000;
   padding-top: 11px;
   width: 260px;
   height: 200px;
+  &:hover {
+    .advertised {
+      animation-name: anim_advertised;
+      animation-duration: 0.5s;
+    }
+    .cheked {
+      animation-name: anim_advertised;
+      animation-duration: 0.5s;
+    }
+  }
+}
+@keyframes anim_advertised {
+  0% {
+    padding: 3px 10px;
+  }
+  50% {
+    padding: 5px 15px;
+  }
+  100% {
+    padding: 3px 10px;
+  }
 }
 .slide_image {
   overflow: visible;
+
   img {
     border-radius: 24px;
     height: 100%;
@@ -715,15 +790,14 @@ color: #000000;
 ////////Registration//////////////////////////////
 .registration {
   margin-bottom: 50px;
-  
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 .registration_content {
@@ -775,15 +849,14 @@ color: #000000;
 ////////AllEazy//////////////////////////////
 .eazy {
   margin-bottom: 50px;
-  
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 .eazy_content {
@@ -851,15 +924,14 @@ color: #000000;
 .driver {
   margin-bottom: 50px;
   color: #ebebeb;
-  
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 .driver_all_contetn {
@@ -966,15 +1038,15 @@ color: #000000;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
-  
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 .question_content {
@@ -984,6 +1056,10 @@ color: #000000;
   background: #fefefe;
   box-shadow: 0px 3.33333px 14.6667px rgba(215, 215, 215, 0.47);
   border-radius: 15px;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.315);
+  }
 }
 .question_content_subtitle {
   font-family: "Mulish";
@@ -1047,19 +1123,19 @@ color: #000000;
   font-size: 14px;
   line-height: 18px;
   color: #5a5a5a;
+  transition: 0.3s;
 }
 ////////AppOrWeb//////////////////////////////
 .app_or_web {
   margin-bottom: 50px;
-  
+  transition: 0.5s;
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show{
+  &.show {
     transition: 0.5s;
     opacity: 1;
-  top: 0px;
-
+    top: 0px;
   }
 }
 .app_or_web_contet {

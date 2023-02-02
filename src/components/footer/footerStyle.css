@@ -1,5 +1,5 @@
 .footer {
-  padding: 15px 0px;
+  padding: 15px 0px 0px;
 }
 
 .footer_logo {
@@ -26,6 +26,10 @@
   align-items: flex-start;
   position: relative;
   color: #262626;
+}
+.footet_pages:hover::before {
+  transition: 0.5s;
+  transform: rotate(360deg);
 }
 .footet_pages::before {
   content: "";
@@ -68,6 +72,10 @@
   position: relative;
   color: #262626;
 }
+.footer_contacts:hover::before {
+  transition: 0.5s;
+  transform: rotate(360deg);
+}
 .footer_contacts::before {
   content: "";
   background-image: url(/public/image/icons/os-black.png);
@@ -106,6 +114,10 @@
   font-size: 14px;
   line-height: 18px;
   position: relative;
+}
+.footer_socials:hover::before {
+  transition: 0.5s;
+  transform: rotate(360deg);
 }
 .footer_socials::before {
   content: "";
@@ -154,6 +166,10 @@
   position: relative;
   cursor: pointer;
 }
+.footer_documents:hover::before {
+  transition: 0.5s;
+  transform: rotate(360deg);
+}
 .footer_documents::before {
   content: "";
   background-image: url(/public/image/icons/os-black.png);
@@ -164,22 +180,6 @@
   position: absolute;
   top: 0px;
   left: -25px;
-}
-
-.document_popup {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(90, 90, 90, 0.5215686275);
-  width: 100%;
-  height: 100%;
-}
-.document_popup .popup_content {
-  position: absolute;
-  width: 435px;
-  height: 230px;
-  background: #fefefe;
-  border-radius: 15px;
 }
 
 .footer_app_or_web {
@@ -231,4 +231,31 @@
   background-color: #665cd1;
   top: 1px;
   box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+}
+
+.copyright {
+  padding: 25px 0px 15px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 14px;
+  text-align: center;
+  color: #7E7E7E;
+}
+
+.document_popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(90, 90, 90, 0.5215686275);
+  width: 100%;
+  height: 100%;
+}
+.document_popup .popup_content {
+  position: absolute;
+  width: 435px;
+  height: 230px;
+  background: #fefefe;
+  border-radius: 15px;
 }
