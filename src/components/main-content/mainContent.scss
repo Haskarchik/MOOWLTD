@@ -33,20 +33,42 @@
   align-items: center;
   flex-wrap: wrap;
 }
-@keyframes all_in_one{
+@keyframes anim_box  {
+  0% {
+    top: -9px;
+    left: 4px;
+  }
+  25%{
+    top: 10px;
+    left: -4px;
+  }
+50%{
+  top: 27px;
+  left: -30px;
+}
+  100% {
+    top: 13px;
+    left: -74px;
+  }
+}
 
-  0%{
-    .cirkle{
-      transform: rotate(0deg);
-    }
-  /* css свойства */
+@keyframes anim_message {
+  0% {
+    /* css свойства */
   }
-  100%{
-    .cirkle{
-      transform: rotate(360deg);
-    }
+  100% {
+    /* css свойства */
   }
+}
+@keyframes anim_carculator {
+  0% {
+    /* css свойства */
   }
+  100% {
+    /* css свойства */
+  }
+}
+  
 .cirkle{
   height: 100px;
   width: 100px;
@@ -116,6 +138,10 @@
     }
     .circle{
       animation-name: all_in_one;
+      animation-duration: 1s;
+    }
+    .box{
+      animation-name: anim_box;
       animation-duration: 1s;
     }
   }

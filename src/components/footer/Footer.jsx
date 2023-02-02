@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footerStyle.css";
 const Footer = () => {
+  const [popupIsOpen, setPopupIsOpen] = useState();
+
+  function documentOpen() {
+    setPopupIsOpen(true);
+  }
   return (
     <footer className="footer">
       <div className="wrapper">
@@ -41,13 +46,20 @@ const Footer = () => {
           <div className="footer_socials">
             Соціальні мережі
             <div className="socials">
-              <a className="facebook" href="#"></a>
-              <a className="instagram" href="#"></a>
-              <a className="youtoube" href="#"></a>
+              <a className="facebook" href="#">
+                <img src="/image/icons/facebook.svg" alt="" />
+              </a>
+              <a className="instagram" href="#">
+                <img src="/image/icons/instagram.svg" alt="" />
+              </a>
+              <a className="youtube" href="#">
+                <img src="/image/icons/youtube.svg" alt="" />
+              </a>
             </div>
           </div>
-          <div className="footer_documents">
+          <div className="footer_documents" onClick={documentOpen}>
             Документи
+            {popupIsOpen }
           </div>
           <div className="footer_app_or_web">
             <div className="footer_app_or_web_title">

@@ -35,7 +35,44 @@
   flex-wrap: wrap;
 }
 
-@-webkit-keyframes all_in_one {
+@-webkit-keyframes anim_box {
+  0% {
+    top: -9px;
+    left: 4px;
+  }
+  25% {
+    top: 10px;
+    left: -4px;
+  }
+  50% {
+    top: 27px;
+    left: -30px;
+  }
+  100% {
+    top: 13px;
+    left: -74px;
+  }
+}
+
+@keyframes anim_box {
+  0% {
+    top: -9px;
+    left: 4px;
+  }
+  25% {
+    top: 10px;
+    left: -4px;
+  }
+  50% {
+    top: 27px;
+    left: -30px;
+  }
+  100% {
+    top: 13px;
+    left: -74px;
+  }
+}
+@-webkit-keyframes anim_message {
   0% {
     /* css свойства */
   }
@@ -43,8 +80,23 @@
     /* css свойства */
   }
 }
-
-@keyframes all_in_one {
+@keyframes anim_message {
+  0% {
+    /* css свойства */
+  }
+  100% {
+    /* css свойства */
+  }
+}
+@-webkit-keyframes anim_carculator {
+  0% {
+    /* css свойства */
+  }
+  100% {
+    /* css свойства */
+  }
+}
+@keyframes anim_carculator {
   0% {
     /* css свойства */
   }
@@ -119,6 +171,18 @@
   transition: 0.3s;
   top: 43px;
   left: 19px;
+}
+.advantages_card:hover .circle {
+  -webkit-animation-name: all_in_one;
+          animation-name: all_in_one;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.advantages_card:hover .box {
+  -webkit-animation-name: anim_box;
+          animation-name: anim_box;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .reverse_card {

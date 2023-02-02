@@ -38,7 +38,6 @@
 
   .footet_pages_list {
     margin-top: 10px;
-  
   }
   li {
     font-family: "Mulish";
@@ -47,8 +46,12 @@
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 10px;
-    /* Black/400 */
+    line-height: 18px;
+    &:hover {
+      text-shadow: 1px 1px 1px rgba(156, 156, 156, 0.349);
 
+      color: #383737;
+    }
     color: #5a5a5a;
   }
 }
@@ -82,9 +85,11 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 18px;
-      /* identical to box height */
+      &:hover {
+        text-shadow: 1px 1px 1px rgba(156, 156, 156, 0.349);
 
-      /* Black/400 */
+        color: #383737;
+      }
 
       color: #5a5a5a;
     }
@@ -113,14 +118,30 @@
     left: -25px;
   }
   .socials {
+    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     .facebook {
+      border-radius: 50%;
+      margin-right: 12px;
+      &:hover {
+        box-shadow: 1px 1px 5px #665cd1;
+      }
     }
     .instagram {
+      border-radius: 50%;
+      margin-right: 12px;
+      &:hover {
+        box-shadow: 1px 1px 5px #665cd1;
+      }
     }
-    .youtoube {
+    .youtube {
+      border-radius: 50%;
+
+      &:hover {
+        box-shadow: 1px 1px 5px #665cd1;
+      }
     }
   }
 }
@@ -131,6 +152,7 @@
   font-size: 14px;
   line-height: 18px;
   position: relative;
+  cursor: pointer;
   &::before {
     content: "";
     background-image: url(/public/image/icons/os-black.png);
@@ -143,53 +165,68 @@
     left: -25px;
   }
 }
+.document_popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #5a5a5a85;
+  width: 100%;
+  height: 100%;
+  .popup_content{
+    position: absolute;
+  width: 435px;
+  height: 230px;
+  background: #fefefe;
+  border-radius: 15px;
+  }
+  
+}
 .footer_app_or_web {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .footer_app_or_web_title {
-  font-family: 'Mulish';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
 
+  /* Black/500 */
 
-/* Black/500 */
-
-color: #262626;
+  color: #262626;
 }
 .footer_app_or_web_buttons {
   display: flex;
 }
 .footer_app_or_web_subtitle {
-  font-family: 'Mulish';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 18px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
 
-color: #262626;
-margin-bottom: 20px;
+  color: #262626;
+  margin-bottom: 20px;
 }
 .footer_web_button {
-  font-family: 'Mulish';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 20px;
-padding: 10px 15px;
-color: #F1F0FF;
-  background: #665CD1;
-box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
-border-radius: 45px;
-&:hover {
-  transition: 0.5s;
-  position: relative;
-  background-color: #665cd1;
-  top: 1px;
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-}
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 15px;
+  color: #f1f0ff;
+  background: #665cd1;
+  box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
+  border-radius: 45px;
+  &:hover {
+    transition: 0.5s;
+    position: relative;
+    background-color: #665cd1;
+    top: 1px;
+    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+  }
 }
