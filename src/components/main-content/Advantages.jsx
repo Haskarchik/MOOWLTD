@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./mainContent.css";
-export default function Advantages() {
+export default function Advantages(props) {
+  const show = useRef()
+  if(props.show){
+    show.current='show'
+  }else{
+    show.current=' '
+  }
   return (
-    <section className="advantages">
+    <section className={"advantages " + show.current}>
       <div className="wrapper">
         <div className="advatages_title title">Наші переваги</div>
         <div className="advantages_content">
@@ -75,8 +81,8 @@ export default function Advantages() {
                   fill="#FEFEFE"
                 />
                 <path className="under_hand_button_around"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M17.348 30.2168C24.5517 30.2168 30.3915 24.377 30.3915 17.1733C30.3915 9.9696 24.5517 4.12984 17.348 4.12984C10.1443 4.12984 4.30452 9.9696 4.30452 17.1733C4.30452 24.377 10.1443 30.2168 17.348 30.2168ZM17.348 34.1298C26.7128 34.1298 34.3045 26.5381 34.3045 17.1733C34.3045 7.80849 26.7128 0.216797 17.348 0.216797C7.98318 0.216797 0.391479 7.80849 0.391479 17.1733C0.391479 26.5381 7.98318 34.1298 17.348 34.1298Z"
                   fill="#665CD1"
                 />

@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import Map from "./Map";
 import "../mainContent.css";
-export default function Statistik() {
+export default function Statistik(props) {
+  const show = useRef()
+  if(props.show){
+    show.current='show'
+  }else{
+    show.current=' '
+  }
   return (
-    <section className="statistics">
+    <section className={"statistics " + show.current}>
       <div className="wrapper">
         <div className="title">Наша статистика показує</div>
         <div className="statistic_content">

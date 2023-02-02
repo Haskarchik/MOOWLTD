@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 
-export default function () {
+export default function (props) {
+  const show = useRef()
+  if(props.show){
+    show.current='show'
+  }else{
+    show.current=' '
+  }
   return (
-    <section className="eazy">
+    <section className={"eazy " + show.current}>
       <div className="wrapper">
         <div className="title">Все просто!</div>
         <div className="eazy_content">

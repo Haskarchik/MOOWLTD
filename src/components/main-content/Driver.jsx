@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 
-export default function Driver() {
+export default function Driver(props) {
+  const show = useRef()
+  if(props.show){
+    show.current='show'
+  }else{
+    show.current=' '
+  }
   return (
-    <section className="driver">
+    <section className={"driver " + show.current}>
       <div className="wrapper">
         <div className="driver_all_contetn">
         <div className="driver_title">

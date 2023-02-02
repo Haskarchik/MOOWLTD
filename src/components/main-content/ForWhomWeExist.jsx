@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./mainContent.css";
 
-export default function () {
+export default function (props) {
+  const first = useRef()
+  if(props.show){
+    first.current='show'
+  }else{
+    first.current=' '
+  }
+  console.log( first.current);
   return (
-    <section className="exist">
+    <section className={"exist " + first.current}>
       <div className="wrapper">
         <div className="exist_content">
           <div className="exist_left_part">

@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
-export default function AboutMoow() {
+export default function AboutMoow(props) {
+  const show = useRef()
+  if(props.show){
+    show.current='show'
+  }else{
+    show.current=' '
+  }
   return (
-  <section className= 'about'>
+  <section className= {'about ' + show.current}>
         <div className='wrapper'>
             <div className="title">
             Про MOOW за 2 хвилини

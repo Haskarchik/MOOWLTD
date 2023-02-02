@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
 
-export default function () {
+export default function (props) {
+  const show = useRef()
+  if(props.show){
+    show.current='show'
+  }else{
+    show.current=' '
+  }
   return (
-    <section className="discounts">
+    <section className={"discounts " + show.current}>
       <div className="wrapper">
         <div className="title">Знижка на послуги MOOW до 12.12</div>
         <div className="discounts_content">

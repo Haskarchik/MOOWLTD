@@ -2,6 +2,14 @@
   margin-top: 50px;
   margin-bottom: 30px;
   padding: 0px 50px;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.advantages.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .wrapper {
@@ -133,6 +141,14 @@
 .exist {
   margin-bottom: 50px;
   padding: 0px 50px;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.exist.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .exist_content {
@@ -291,6 +307,14 @@
 
 .statistics {
   margin-bottom: 30px;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.statistics.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .statistik_label {
@@ -403,12 +427,34 @@
 .map_active_block {
   position: absolute;
   width: 260px;
-  height: 93px;
-  background-color: aquamarine;
-  overflow: hidden;
+  max-height: 93px;
+  transition: 0.3s;
   background: #fefefe;
+  padding: 8px 10px;
   border: 2px solid #665cd1;
   border-radius: 10px;
+}
+
+.map_active_block_label {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.region_info {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+.region_info li span {
+  color: #665CD1;
 }
 
 .map_button {
@@ -433,6 +479,14 @@
 
 .about {
   margin-bottom: 20px;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.about.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .about_content {
@@ -459,6 +513,14 @@
   margin-bottom: 50px;
   padding: 20px 50px;
   background: #f1f0ff;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.discounts.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .swiper_slide {
@@ -608,6 +670,14 @@
 
 .registration {
   margin-bottom: 50px;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.registration.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .registration_content {
@@ -658,6 +728,14 @@
 
 .eazy {
   margin-bottom: 50px;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.eazy.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .eazy_content {
@@ -717,6 +795,14 @@
 .driver {
   margin-bottom: 50px;
   color: #ebebeb;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.driver.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .driver_all_contetn {
@@ -830,6 +916,14 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.question.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .question_content {
@@ -908,6 +1002,14 @@
 
 .app_or_web {
   margin-bottom: 50px;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+}
+.app_or_web.show {
+  transition: 0.5s;
+  opacity: 1;
+  top: 0px;
 }
 
 .app_or_web_contet {

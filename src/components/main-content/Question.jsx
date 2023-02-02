@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 
-export default function Question() {
+export default function Question(props) {
+  const show = useRef()
+  if(props.show){
+    show.current='show'
+  }else{
+    show.current=' '
+  }
   return (
-    <section className="question">
+    <section className={"question " + show.current}>
       <div className="wrapper">
         <div className="question_content">
           <div className="title">Залишились запитання?</div>

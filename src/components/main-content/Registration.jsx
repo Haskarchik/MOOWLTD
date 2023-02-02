@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 
-export default function Registration() {
+export default function Registration(props) {
+  const show = useRef()
+  if(props.show){
+    show.current='show'
+  }else{
+    show.current=' '
+  }
   return (
-    <section className="registration">
+    <section className={"registration " + show.current}>
       <div className="wrapper">
         <div className="title">Види реєстрації</div>
         <div className="registration_content">

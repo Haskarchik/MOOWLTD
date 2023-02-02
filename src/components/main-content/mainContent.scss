@@ -2,6 +2,16 @@
   margin-top: 50px;
   margin-bottom: 30px;
   padding: 0px 50px;
+
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 .wrapper {
   max-width: 1180px;
@@ -127,6 +137,16 @@
 .exist {
   margin-bottom: 50px;
   padding: 0px 50px;
+
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 .exist_content {
   max-width: 1170px;
@@ -274,6 +294,16 @@
 ////////Statistics//////////////////////////////
 .statistics {
   margin-bottom: 30px;
+  
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 .statistik_label {
   margin-bottom: 20px;
@@ -377,14 +407,34 @@
 .map_active_block {
   position: absolute;
   width: 260px;
-  height: 93px;
-  background-color: aquamarine;
-
-  overflow: hidden;
+  max-height: 93px;
+  transition: 0.3s;
   background: #fefefe;
-
+padding: 8px 10px;
   border: 2px solid #665cd1;
   border-radius: 10px;
+}
+.map_active_block_label{
+  font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+margin-bottom: 5px;
+color: #000000;
+}
+.region_info{
+  font-family: 'Mulish';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+li{
+  span{
+    color: #665CD1;
+  }
+}
+color: #000000;
 }
 .map_button {
   font-family: "Mulish";
@@ -408,6 +458,16 @@
 ////////AboutMoow//////////////////////////////
 .about {
   margin-bottom: 20px;
+  
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 .about_content {
   display: flex;
@@ -431,6 +491,16 @@
   margin-bottom: 50px;
   padding: 20px 50px;
   background: #f1f0ff;
+  
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 
 .swiper_slide {
@@ -578,6 +648,16 @@
 ////////Registration//////////////////////////////
 .registration {
   margin-bottom: 50px;
+  
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 .registration_content {
   display: flex;
@@ -628,6 +708,16 @@
 ////////AllEazy//////////////////////////////
 .eazy {
   margin-bottom: 50px;
+  
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 .eazy_content {
   display: flex;
@@ -694,6 +784,16 @@
 .driver {
   margin-bottom: 50px;
   color: #ebebeb;
+  
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 .driver_all_contetn {
   background-image: url(/public/image/driver-back.png);
@@ -799,6 +899,16 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
+  
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 .question_content {
   text-align: center;
@@ -841,7 +951,6 @@
       background-color: #665cd1;
       top: 1px;
       box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-      
     }
   }
   .go_bot {
@@ -875,6 +984,16 @@
 ////////AppOrWeb//////////////////////////////
 .app_or_web {
   margin-bottom: 50px;
+  
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  &.show{
+    transition: 0.5s;
+    opacity: 1;
+  top: 0px;
+
+  }
 }
 .app_or_web_contet {
   display: flex;
@@ -954,7 +1073,6 @@
       background-color: #665cd1;
       top: 1px;
       box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-      
     }
   }
 }
