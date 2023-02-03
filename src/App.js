@@ -1,4 +1,5 @@
 import "./App.css";
+
 import ForWhomWeExist from "./components/main-content/ForWhomWeExist";
 import Header from "./components/header/Header";
 import Advantages from "./components/main-content/Advantages";
@@ -11,13 +12,15 @@ import Driver from "./components/main-content/Driver";
 import Question from "./components/main-content/Question";
 import AppOrWeb from "./components/main-content/AppOrWeb";
 import Footer from "./components/footer/Footer";
-import { useEffect, useRef, useState } from "react";
-import Modal from "./components/Modal";
+
+import { useEffect, useState } from "react";
+
 
 function App() {
+
   const [scroll, setscroll] = useState(0);
 
-  useEffect(() => {
+  useEffect(() => {  
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -30,6 +33,7 @@ function App() {
     <div className="App">
       <Header />
       <Advantages show={"show"} />
+      {/* scroll height check if true we show the component */}
       {scroll > 550 ? <ForWhomWeExist show={"show"} /> : <ForWhomWeExist />}
       {scroll > 750 ? <Statistik show={"show"} /> : <Statistik />}
       {scroll > 1900 ? <AboutMoow show={"show"} /> : <AboutMoow />}
@@ -39,7 +43,6 @@ function App() {
       {scroll > 3340 ? <Driver show={"show"} /> : <Driver />}
       {scroll > 4070 ? <Question show={"show"} /> : <Question />}
       {scroll > 4400 ? <AppOrWeb show={"show"} /> : <AppOrWeb />}
-
       <Footer />
     </div>
   );

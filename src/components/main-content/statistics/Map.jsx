@@ -1,39 +1,37 @@
 import React, { useRef, useState } from "react";
+
 import Info from "./Info";
 
 export default function Map(props) {
+
   const [InfoBlok, setInfoBlok] = useState();
 
   const show = useRef()
-  if(props.show){
+
+  if (props.show) {
     show.current='show'
-  }else{
+  } else {
     show.current=' '
   }
 
-
   const occupiedTerritory = "#EBEBEB";
   const defaultTerritory = "#F1F0FF";
-
-
 
   function mouseEnter(e) {
     e.currentTarget.style.fill = "#9D97E2";
     e.currentTarget.style.transition = "0.3s";
 
     ukraine.props.children.forEach((el) => {
-      
       if (el.props.d === e._targetInst.memoizedProps.d) {
+        console.log(e)
         setInfoBlok(
           <Info regionX={e.pageX} regionY={e.pageY} data={el.props.data} />
         );
-      
       }
     });
   }
   function mouseLeave(e, color) {
     e.currentTarget.style.fill = `${colors()}`;
-
     function colors() {
       if (color) {
         return color;
@@ -41,10 +39,9 @@ export default function Map(props) {
         return defaultTerritory;
       }
     }
-
     e.currentTarget.style.transition = "0.3s";
   }
-  let ukraine = (
+  let ukraine = (/*  Ukraine map */
     <svg
       width="911"
       height="606"
@@ -394,7 +391,7 @@ export default function Map(props) {
     </svg>
   );
   return (
-    <div className={"map " + show.current}>
+    <div className={"map " + show.current}> 
       <div className="map_label">
         Наведіть на потрібну область, щоб побачити дані
       </div>

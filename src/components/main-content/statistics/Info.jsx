@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 
 const Imfo = (props) => {
+
   let onMapData = useRef();
+  
   switch (props.data) {
     case "Lviv":
       onMapData.current = (
@@ -442,7 +444,10 @@ const Imfo = (props) => {
   let div = (
     <div
       className="map_active_block"
-      style={{ top: props.regionY - udaptivePointsY, left: props.regionX  - udaptivePointsX }}
+      style={{      /* we transfer the coordinates of the active block  */
+        top: props.regionY - udaptivePointsY,
+        left: props.regionX - udaptivePointsX,
+      }}
     >
       {onMapData.current}
     </div>

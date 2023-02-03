@@ -1,14 +1,17 @@
 import React, { useRef } from "react";
 
 const AppOrWeb = (props) => {
-  const show = useRef()
-  if(props.show){
-    show.current='show'
-  }else{
-    show.current=' '
+
+  const show = useRef();
+
+  if (props.show) {   /* check class  */
+    show.current = "show";
+  } else {
+    show.current = " ";
   }
+
   return (
-    <section className={"app_or_web " + show.current}>
+    <section className={"app_or_web " + show.current}>  {/* adding class show */}
       <div className="wrapper">
         <div className="app_or_web_contet">
           <div className="app_or_web_title">

@@ -33,12 +33,12 @@
   text-decoration: none;
 }
 .nav_list li {
-  box-sizing: content-box;
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
+  box-sizing: content-box;
   margin: 0px 50px;
   padding: 5px 10px;
   border-radius: 45px;

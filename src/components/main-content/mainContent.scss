@@ -1,27 +1,44 @@
-.advantages {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  padding: 0px 50px;
+@mixin fontStyle($size, $lineHeight) {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: $size;
+  line-height: $lineHeight;
+}
 
-  opacity: 0.2;
-  position: relative;
-  top: 150px;
+%buttonAnimation {
+  &:hover {
+    transition: 0.5s;
+    position: relative;
+    background-color: #665cd1;
+    top: 1px;
+    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+  }
+}
+
+%showSeaction {
   &.show {
     transition: 0.5s;
     opacity: 1;
     top: 0px;
   }
 }
+
+.advantages {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 0px 50px;
+  opacity: 0.2;
+  position: relative;
+  top: 150px;
+  @extend showSeaction;
+}
 .wrapper {
   max-width: 1180px;
   margin: auto;
 }
 .title {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
+  @include fontStyle(24px, 30px);
   color: #665cd1;
   margin-bottom: 20px;
 }
@@ -160,22 +177,18 @@
       transition: 0.5s;
       .under_hand_button_inside {
         transition: 0.3s;
-
         fill: #665cd1;
       }
       .under_hand_button_around,
       .under_hand_button_center {
         transition: 0.3s;
-
         fill: #fefefe;
       }
-
       top: 21px;
       left: 5px;
     }
     .hand {
       transition: 0.3s;
-
       top: 43px;
       left: 19px;
     }
@@ -231,23 +244,15 @@
 }
 .ad_card_label {
   margin-bottom: 10px;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 24px;
+  @include fontStyle(19px, 24px);
   color: #262626;
 }
 .ad_card_text {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(16px, 20px);
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
   color: #262626;
 }
 ////////For whom we exist//////////////////////////////
-
 .exist {
   margin-bottom: 50px;
   padding: 0px 50px;
@@ -255,11 +260,7 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 .exist_content {
   max-width: 1170px;
@@ -272,11 +273,8 @@
   .exist_list {
     margin-left: 30px;
     li {
-      font-family: "Mulish";
-      font-style: normal;
+      @include fontStyle(16px, 20px);
       font-weight: 500;
-      font-size: 16px;
-      line-height: 20px;
       color: #262626;
       margin-bottom: 15px;
       position: relative;
@@ -315,7 +313,6 @@
   background-image: url(/public/image/icons/os.svg);
   background-repeat: no-repeat;
   margin-bottom: 10px;
-
   height: 20px;
   width: 20px;
 }
@@ -345,21 +342,13 @@
   width: 501px;
 }
 .offer_title {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
+  @include fontStyle(24px, 30px);
   text-align: center;
   color: #262626;
 }
 .offer_button {
   display: block;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  @include fontStyle(16px, 20px);
   color: #f1f0ff;
   background: #665cd1;
   color: white;
@@ -411,11 +400,7 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 .statistik_label {
   margin-bottom: 20px;
@@ -423,11 +408,7 @@
     max-width: 430px;
   }
   width: 535px;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 24px;
+  @include fontStyle(19px, 24px);
   color: #171717;
   p {
     font-size: 11px;
@@ -448,21 +429,14 @@
   border-radius: 10px;
 }
 .stat_card_label {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  @include fontStyle(16px, 20px);
   color: #262626;
   margin-bottom: 15px;
 }
 .stat_card_top_list {
   margin-bottom: 15px;
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(14px, 18px);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
   color: #262626;
   li {
     margin-bottom: 10px;
@@ -473,11 +447,7 @@
       display: inline-block;
       width: 20px;
       height: 20px;
-      font-family: "Mulish";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 11px;
-      line-height: 14px;
+      @include fontStyle(11px, 14px);
       color: #665cd1;
       background: #f1f0ff;
       border-radius: 42px;
@@ -487,12 +457,7 @@
   }
 }
 .stat_card_at_ukraine {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-
+  @include fontStyle(16px, 20px);
   color: #262626;
   span {
     color: #665cd1;
@@ -506,19 +471,12 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 
 .map_label {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(14px, 18px);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
   color: #5a5a5a;
   margin-bottom: 7px;
 }
@@ -537,20 +495,13 @@
   border-radius: 10px;
 }
 .map_active_block_label {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
+  @include fontStyle(14px, 18px);
   margin-bottom: 5px;
   color: #000000;
 }
 .region_info {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(14px, 18px);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
   li {
     span {
       color: #665cd1;
@@ -559,11 +510,7 @@
   color: #000000;
 }
 .map_button {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  @include fontStyle(16px, 20px);
   color: #f1f0ff;
   padding: 10px 15px;
   background: #665cd1;
@@ -584,11 +531,7 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 .about_content {
   display: flex;
@@ -601,7 +544,6 @@
 }
 .about_video {
   margin: 0px 25px;
-
   width: 700px;
   height: 350px;
   border: 3px solid #f1f0ff;
@@ -616,11 +558,7 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 
 .swiper_slide {
@@ -651,7 +589,6 @@
 }
 .slide_image {
   overflow: visible;
-
   img {
     border-radius: 24px;
     height: 100%;
@@ -665,16 +602,10 @@
   top: 7px;
   left: 7px;
   position: absolute;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12.6667px;
-  line-height: 16px;
+  @include fontStyle(12.7px, 16px);
   display: inline-block;
   text-align: center;
-
   padding: 3px 10px;
-
   color: #665cd1;
   background: #f1f0ff;
   border-radius: 5.33333px;
@@ -693,11 +624,7 @@
   top: 35px;
   left: 7px;
   position: absolute;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12.6667px;
-  line-height: 16px;
+  @include fontStyle(12.7px, 16px);
   padding: 3px 10px;
   text-align: center;
   display: inline-block;
@@ -715,45 +642,28 @@
   justify-content: space-between;
 }
 .slide_main_info {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(14px, 18px);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-
   color: #262626;
 }
 .slide_price {
   position: relative;
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(16px, 20px);
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-
   color: #665cd1;
   span {
     position: absolute;
     display: inline-block;
-    font-family: "Mulish";
-    font-style: normal;
+    @include fontStyle(10px, 13px);
     font-weight: 300;
-    font-size: 10px;
-    line-height: 13px;
-
     color: #5a5a5a;
   }
 }
 
 .slide_rating {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(11px, 14px);
   font-weight: 500;
-  font-size: 11px;
-  line-height: 14px;
-
   text-align: right;
-
   color: #5a5a5a;
   position: relative;
   &::before {
@@ -768,12 +678,10 @@
   }
 }
 .slide_views {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(11px, 14px);
   font-weight: 500;
   font-size: 11px;
   line-height: 14px;
-
   color: #5a5a5a;
   position: relative;
   &::before {
@@ -794,11 +702,7 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 .registration_content {
   display: flex;
@@ -815,7 +719,6 @@
   &:hover {
     transition: 0.5s;
     position: relative;
-
     top: 1px;
     box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.315);
   }
@@ -825,25 +728,13 @@
 }
 .reg_card_label {
   margin-bottom: 10px;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 24px;
-
+  @include fontStyle(19px, 24px);
   color: #171717;
 }
 .reg_card_text {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(16px, 20px);
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-
-  /* Black/500 */
-
   color: #262626;
-
   width: 470px;
 }
 ////////AllEazy//////////////////////////////
@@ -853,15 +744,10 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 .eazy_content {
   display: flex;
-
   justify-content: space-between;
   align-items: stretch;
 }
@@ -872,23 +758,17 @@
   &:hover {
     #os_around {
       transition: 0.5s;
-
       fill: #f1f0ff;
     }
     #os_inside {
       transition: 0.5s;
-
       fill: #665cd1;
     }
     background-color: #665cd1;
     svg {
       transition: 0.7s;
       transform: rotate(360deg);
-
       fill: #f1f0ff;
-
-      path {
-      }
     }
   }
   svg {
@@ -901,22 +781,13 @@
   background: #f1f0ff;
 }
 .eazy_card_label {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-
+  @include fontStyle(16px, 20px);
   color: #171717;
 }
 .eazy_card_text {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(14px, 18px);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
   text-align: center;
-
   color: #171717;
 }
 ////////Driver//////////////////////////////
@@ -928,11 +799,7 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 .driver_all_contetn {
   background-image: url(/public/image/driver-back.png);
@@ -953,20 +820,13 @@
   margin-top: 45px;
 }
 .driver_info_title {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
+  @include fontStyle(32px, 40px);
   margin-bottom: 100px;
 }
 .driver_info_sub_title {
   margin-top: 15px;
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(24px, 30px);
   font-weight: 500;
-  font-size: 24px;
-  line-height: 30px;
 }
 .driver_info_lists {
   display: flex;
@@ -976,23 +836,15 @@
 .info_list_users,
 .info_list_drivers {
   h3 {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    @include fontStyle(16px, 20px);
     margin-bottom: 20px;
   }
 }
 .list_users,
 .list_drivers {
   color: #ebebeb;
-
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(14px, 18px);
   font-weight: 300;
-  font-size: 14px;
-  line-height: 18px;
   padding-left: 25px;
   li {
     margin-bottom: 10px;
@@ -1008,13 +860,11 @@
       top: 5px;
       left: -25px;
     }
-
     &:last-child {
       margin-bottom: 0px;
     }
   }
 }
-
 .driver_image {
   margin-top: 60px;
   img {
@@ -1022,11 +872,7 @@
   }
 }
 .driver_future {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
+  @include fontStyle(32px, 40px);
   text-align: right;
   position: absolute;
   bottom: -30px;
@@ -1042,12 +888,7 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 .question_content {
   text-align: center;
@@ -1062,11 +903,8 @@
   }
 }
 .question_content_subtitle {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(16px, 20px);
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
   text-align: center;
   margin-bottom: 25px;
   color: #262626;
@@ -1081,47 +919,24 @@
     box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
     border-radius: 45px;
     padding: 10px 15px;
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    @include fontStyle(16px, 20px);
     color: #f1f0ff;
 
-    &:hover {
-      transition: 0.5s;
-      position: relative;
-      background-color: #665cd1;
-      top: 1px;
-      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-    }
+    @extend buttonAnimation;
   }
   .go_bot {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    @include fontStyle(16px, 20px);
     color: #f1f0ff;
     padding: 10px 15px;
     background: #665cd1;
     box-shadow: 0px 4px 10px rgba(111, 98, 228, 0.945);
     border-radius: 45px;
-    &:hover {
-      transition: 0.5s;
-      position: relative;
-      background-color: #665cd1;
-      top: 1px;
-      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-    }
+    @extend buttonAnimation;
   }
 }
 .question_text {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(14px, 18px);
   font-weight: 300;
-  font-size: 14px;
-  line-height: 18px;
   color: #5a5a5a;
   transition: 0.3s;
 }
@@ -1132,11 +947,7 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+  @extend showSeaction;
 }
 .app_or_web_contet {
   display: flex;
@@ -1151,20 +962,13 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .app_or_web_title {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
+  @include fontStyle(24px, 30px);
   color: #f1f0ff;
   margin-bottom: 10px;
 }
 .app_or_web_subtitle {
-  font-family: "Mulish";
-  font-style: normal;
+  @include fontStyle(16px, 20px);
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
   color: #f1f0ff;
   margin-bottom: 25px;
 }
@@ -1173,22 +977,12 @@
   margin-bottom: 30px;
   a {
     padding: 10px 15px;
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    @include fontStyle(16px, 20px);
     color: #f1f0ff;
     background: #665cd1;
     box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
     border-radius: 45px;
-    &:hover {
-      transition: 0.5s;
-      position: relative;
-      background-color: #665cd1;
-      top: 1px;
-      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-    }
+    @extend buttonAnimation;
   }
 }
 .app_or_web_app {
@@ -1198,24 +992,13 @@
   justify-content: space-between;
 
   .app_or_web_buttot_app {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-
+    @include fontStyle(16px, 20px);
     padding: 10px 15px;
     color: #f1f0ff;
     background: #171717;
     box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
     border-radius: 45px;
 
-    &:hover {
-      transition: 0.5s;
-      position: relative;
-      background-color: #665cd1;
-      top: 1px;
-      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-    }
+    @extend buttonAnimation;
   }
 }

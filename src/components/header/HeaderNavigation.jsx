@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import headerStyle from "../header/header.module.css";
 
 const HeaderNavigation = () => {
+
   const [langOpen, setlangOpen] = useState(false);
   const [lang, setLang] = useState("Укр");
 
@@ -24,7 +25,7 @@ const HeaderNavigation = () => {
             <img
               className={headerStyle.logo}
               src="/image/icons/logo.png"
-              alt=""
+              alt="Logo"
             />
           </a>
         </div>
@@ -40,9 +41,12 @@ const HeaderNavigation = () => {
             <li>FAQ</li>
           </a>
         </ul>
+
         <button className={headerStyle.button}>До веб-версії MOOW</button>
 
-        <div className={ langOpen?  headerStyle.nav_languages_active:headerStyle.nav_languages  } onClick={languages}>
+        <div 
+        className={ langOpen?  headerStyle.nav_languages_active:headerStyle.nav_languages  } 
+        onClick={languages}>
           {lang}
           {langOpen && (
             <div className={headerStyle.nav_languages_block}>
@@ -50,7 +54,7 @@ const HeaderNavigation = () => {
                 className={headerStyle.nav_languages_ua}
                 onClick={setUaLanguages}
               >
-                Укр
+                Укр 
               </div>
               <div
                 className={headerStyle.nav_languages_eng}

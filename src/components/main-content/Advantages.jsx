@@ -1,23 +1,43 @@
 import React, { useRef } from "react";
 import "./mainContent.css";
+
 export default function Advantages(props) {
+
   const show = useRef();
-  if (props.show) {
+
+  if (props.show) {     /* check class  */
     show.current = "show";
   } else {
     show.current = " ";
   }
+
   return (
-    <section className={"advantages " + show.current}>
+    <section className={"advantages " + show.current}> {/* adding class show */}
       <div className="wrapper">
         <div className="advatages_title title">Наші переваги</div>
         <div className="advantages_content">
           <div className="advantages_card">
             <div className="ad_card_img">
-              <img className="cirkle" src="/image/icons/all-in-one/cirkle.png" alt="" />
-              <img className="message" src="/image/icons/all-in-one/messege.svg" alt="" />
-              <img className="box" src="/image/icons/all-in-one/box.svg" alt="" />
-              <img className="carculator" src="/image/icons/all-in-one/carculator.svg" alt="" />
+              <img
+                className="cirkle"
+                src="/image/icons/all-in-one/cirkle.png"
+                alt="cirkle"
+              />
+              <img
+                className="message"
+                src="/image/icons/all-in-one/messege.svg"
+                alt="messeges"
+              />
+              <img
+                className="box"
+                src="/image/icons/all-in-one/box.svg"
+                alt="box"
+              />
+              <img
+                className="carculator"
+                src="/image/icons/all-in-one/carculator.svg"
+                alt="carculator"
+              />
             </div>
             <div className="ad_card_description">
               <div className="ad_card_label">Все в одному сервісі</div>
@@ -30,11 +50,11 @@ export default function Advantages(props) {
           </div>
           <div className="advantages_card">
             <div className="ad_card_img">
-              <img src="/image/icons/business-process-control.svg" alt="" />
+              <img src="/image/icons/business-process-control.svg" alt="business process control" />
               <img
                 className="advantages_card_loop"
                 src="/image/icons/business-process-control-loop.svg"
-                alt=""
+                alt="business process control loop"
               />
             </div>
             <div className="ad_card_description">
@@ -50,11 +70,11 @@ export default function Advantages(props) {
           </div>
           <div className="advantages_card reverse_card">
             <div className="ad_card_img">
-              <img src="/image/icons/verified-members.svg" alt="" />
+              <img src="/image/icons/verified-members.svg" alt="verified-members" />
               <img
                 className="advantages_card_chek_mark"
                 src="/image/icons/check-mark.svg"
-                alt=""
+                alt="check-mark"
               />
             </div>
             <div className="ad_card_description">
@@ -69,8 +89,6 @@ export default function Advantages(props) {
           </div>
           <div className="advantages_card reverse_card">
             <div className="ad_card_img">
-              {/* <img className="under_hand_button" src="/image/icons/under_hand_button.svg" alt="" />
-               */}
               <svg
                 className="under_hand_button"
                 width="35"
@@ -97,8 +115,7 @@ export default function Advantages(props) {
                   fill="#665CD1"
                 />
               </svg>
-
-              <img className="hand" src="/image/icons/hand.svg" alt="" />
+              <img className="hand" src="/image/icons/hand.svg" alt="hand" />
             </div>
             <div className="ad_card_description">
               <div className="ad_card_label">Простота</div>

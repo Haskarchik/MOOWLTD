@@ -1,3 +1,11 @@
+@mixin fontStyle($size, $lineHeight) {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
 .header {
   color: white;
   background-image: url(/public/image/header-bak.png);
@@ -28,31 +36,21 @@
     text-decoration: none;
   }
   li {
+    @include fontStyle(16px, 16px);
     box-sizing: content-box;
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 16px;
     margin: 0px 50px;
     padding: 5px 10px;
     border-radius: 45px;
     transition: 0.3s;
-
     &:hover {
       background-color: #665cd1;
     }
   }
 }
 .button {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  @include fontStyle(16px, 20px);
   padding: 10px 15px;
   color: white;
-
   background: #665cd1;
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
@@ -66,14 +64,9 @@
 }
 .nav_languages {
   cursor: pointer;
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  @include fontStyle(16px, 20px);
   position: relative;
   transition: 0.3s;
-
   border-radius: 15px;
   padding: 7px 15px;
   &::after,
@@ -105,7 +98,7 @@
   line-height: 20px;
   position: relative;
   border-radius: 15px;
-transition: 0.3s;
+  transition: 0.3s;
   padding: 7px 15px;
   background-color: #665cd1;
   &::after,
@@ -121,13 +114,11 @@ transition: 0.3s;
   &::after {
     left: 50px;
     transition: 0.3s;
-
     transform: rotate(45deg);
   }
   &::before {
     left: 47px;
     transition: 0.3s;
-
     transform: rotate(-45deg);
   }
   .nav_languages_block {
@@ -136,7 +127,6 @@ transition: 0.3s;
     position: absolute;
     top: 35px;
     left: 0px;
-
     background-color: #665cd1;
   }
   position: relative;
@@ -144,7 +134,6 @@ transition: 0.3s;
 
 .nav_languages_ua {
   border-radius: 15px;
-
   padding: 7px 15px;
   border-bottom: 1px solid grey;
   &:hover {
@@ -153,7 +142,6 @@ transition: 0.3s;
 }
 .nav_languages_eng {
   border-radius: 15px;
-
   padding: 7px 15px;
   border-bottom: 1px solid grey;
   &:hover {
@@ -162,11 +150,7 @@ transition: 0.3s;
 }
 
 .seaction {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
+  @include fontStyle(32px,40px);
   .title {
     max-width: 510px;
     margin-bottom: 115px;
@@ -184,11 +168,7 @@ transition: 0.3s;
   }
   .header_button {
     text-align: center;
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    @include fontStyle(16px,20px);
     padding: 10px 40px 10px 15px;
     color: white;
     background: #665cd1;
@@ -201,7 +181,6 @@ transition: 0.3s;
     &::before {
       content: "";
       transition: 0.3s all;
-
       height: 1.2px;
       width: 7px;
       background-color: white;
@@ -224,7 +203,6 @@ transition: 0.3s;
       position: relative;
       background-color: #665cd1;
       top: 1px;
-
       box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
       &::after {
         top: 17px;
@@ -239,20 +217,13 @@ transition: 0.3s;
     }
   }
   .header_black_button {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-
+    @include fontStyle(16px,20px);
     color: #f1f0ff;
-
     padding: 10px 15px;
     background: #171717;
     box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
     border-radius: 45px;
     transition: 0.5s all;
-
     &:hover {
       position: relative;
       background-color: #665cd1;

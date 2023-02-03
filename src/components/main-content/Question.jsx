@@ -1,14 +1,17 @@
 import React, { useRef } from "react";
 
 export default function Question(props) {
-  const show = useRef()
-  if(props.show){
-    show.current='show'
-  }else{
-    show.current=' '
+
+  const show = useRef();
+
+  if (props.show) {   /* check class */ 
+    show.current = "show";
+  } else {
+    show.current = " ";
   }
+
   return (
-    <section className={"question " + show.current}>
+    <section className={"question " + show.current}> {/* adding class show */}
       <div className="wrapper">
         <div className="question_content">
           <div className="title">Залишились запитання?</div>
@@ -18,8 +21,12 @@ export default function Question(props) {
             чат-боту!
           </div>
           <div className="question_buttons">
-            <a className="go_faq" href="#">Перейди до FAQ</a>
-            <a className="go_bot" href="#">Написати через чат-бот</a>
+            <a className="go_faq" href="#">  {/* button */}
+              Перейди до FAQ
+            </a>
+            <a className="go_bot" href="#">   {/* button */}
+              Написати через чат-бот
+            </a>
           </div>
           <div className="question_text">
             Середній час відповіді у чат-боті в робочий час (понеділок –

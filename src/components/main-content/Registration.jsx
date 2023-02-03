@@ -1,23 +1,26 @@
 import React, { useRef } from "react";
 
 export default function Registration(props) {
-  const show = useRef()
-  if(props.show){
-    show.current='show'
-  }else{
-    show.current=' '
+
+  const show = useRef();
+
+  if (props.show) {   /* check class */ 
+    show.current = "show";
+  } else {
+    show.current = " ";
   }
+
   return (
-    <section className={"registration " + show.current}>
+    <section className={"registration " + show.current}> {/* adding class show */}
       <div className="wrapper">
         <div className="title">Види реєстрації</div>
         <div className="registration_content">
           <div className="reg_card">
-            <div className="exist_left_words">
+            <div className="exist_left_words"> {/* Vertical column with words */}
               <div className="m"></div>
               <div className="oo"></div>
               <div className="o"></div>
-              <div className="w last_word"></div>
+              <div className="w last_word"></div> {/* remove margin */}
             </div>
             <div className="reg_card_content">
               <div className="reg_card_label">Фізична особа</div>
@@ -36,11 +39,11 @@ export default function Registration(props) {
             </div>
           </div>
           <div className="reg_card">
-            <div className="exist_left_words">
+            <div className="exist_left_words">  {/* Vertical column with words */}
               <div className="m"></div>
               <div className="oo"></div>
               <div className="o"></div>
-              <div className="w last_word"></div>
+              <div className="w last_word"></div>  {/* remove margin */}
             </div>
             <div className="reg_card_content">
               <div className="reg_card_label">Юридична особа</div>
