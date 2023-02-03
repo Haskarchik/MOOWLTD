@@ -42,15 +42,15 @@ const Imfo = (props) => {
     }
   });
 
-  let udaptivePointsY = 2005;
-  let udaptivePointsX = 455;
+  let udaptivePointsY = 1500;
+  let udaptivePointsX = 50;
 
   let div = (
     <div
       className="map_active_block"
       style={{      /* we transfer the coordinates of the active block  */
         top: props.regionY - udaptivePointsY,
-        left: props.regionX - udaptivePointsX,
+        left: props.regionX  + udaptivePointsX,
       }}
     >
       {onMapData.current}
