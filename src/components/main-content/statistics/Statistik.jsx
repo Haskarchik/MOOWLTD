@@ -4,7 +4,6 @@ import Map from "./Map";
 import "../mainContent.css";
 
 export default function Statistik(props) {
-
   const [scroll, setscroll] = useState(0);
 
   useEffect(() => {
@@ -18,10 +17,10 @@ export default function Statistik(props) {
 
   const show = useRef();
 
-  props.show ? show.current = "show" : show.current = " ";  /* check class */ 
-  
+  props.show ? (show.current = "show") : (show.current = " "); /* check class */
+
   return (
-    <section className={"statistics " + show.current}> {/* adding class show */}
+    <section className={"statistics " + show.current}>   {/* adding class show */}
       <div className="wrapper">
         <div className="title">Наша статистика показує</div>
         <div className="statistic_content">
