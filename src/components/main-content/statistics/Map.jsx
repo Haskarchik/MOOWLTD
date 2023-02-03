@@ -19,7 +19,6 @@ export default function Map(props) {
 
     ukraine.props.children.forEach((el) => {
       if (el.props.d === e._targetInst.memoizedProps.d) {
-        console.log(e)
         setInfoBlok(
           <Info regionX={e.pageX} regionY={e.pageY} data={el.props.data} />
         );
