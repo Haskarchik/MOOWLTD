@@ -463,14 +463,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  opacity: 0.2;
-  position: relative;
-  top: 150px;
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
+ 
 }
 
 .map_label {

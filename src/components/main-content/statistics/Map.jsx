@@ -392,13 +392,14 @@ export default function Map(props) {
       </div>
       <div className="active_map">
         {ukraine}
-        {InfoBlok}
+        
       </div>
       <div>
         <a href="#" className="map_button button">
           Більше статистики від MOOW
         </a>
       </div>
+      {InfoBlok}
     </div>
   );
 }
