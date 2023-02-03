@@ -3,16 +3,12 @@ import "./mainContent.css";
 
 export default function (props) {
 
-  const first = useRef();
+  const show = useRef();
 
-  if (props.show) {  /* check class  */
-    first.current = "show";
-  } else {
-    first.current = " ";
-  }
+  props.show ? show.current = "show" : show.current = " ";  /* check class */ 
 
   return (
-    <section className={"exist " + first.current}>  {/* adding class show */}
+    <section className={"exist " + show.current}>  {/* adding class show */}
       <div className="wrapper">
         <div className="exist_content">
           <div className="exist_left_part">

@@ -4,11 +4,7 @@ const AppOrWeb = (props) => {
 
   const show = useRef();
 
-  if (props.show) {   /* check class  */
-    show.current = "show";
-  } else {
-    show.current = " ";
-  }
+  props.show ? show.current = "show" : show.current = " ";  /* check class */ 
 
   return (
     <section className={"app_or_web " + show.current}>  {/* adding class show */}

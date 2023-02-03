@@ -4,11 +4,7 @@ export default function (props) {
 
   const show = useRef();
 
-  if (props.show) {    /* check class  */
-    show.current = "show";
-  } else {
-    show.current = " ";
-  }
+  props.show ? show.current = "show" : show.current = " ";  /* check class */ 
   
   return (
     <section className={"eazy " + show.current}> {/* adding class show */}

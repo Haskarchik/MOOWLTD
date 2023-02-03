@@ -5,11 +5,7 @@ export default function Advantages(props) {
 
   const show = useRef();
 
-  if (props.show) {     /* check class  */
-    show.current = "show";
-  } else {
-    show.current = " ";
-  }
+  props.show ? show.current = "show" : show.current = " ";  /* check class */ 
 
   return (
     <section className={"advantages " + show.current}> {/* adding class show */}

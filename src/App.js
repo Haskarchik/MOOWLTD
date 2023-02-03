@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       <Header />
       <Advantages show={"show"} />
-      {/* scroll height check if true we show the component */}
+      {/* scroll height check, if true we show the component */}
       {scroll > 550 ? <ForWhomWeExist show={"show"} /> : <ForWhomWeExist />}
       {scroll > 750 ? <Statistik show={"show"} /> : <Statistik />}
       {scroll > 1900 ? <AboutMoow show={"show"} /> : <AboutMoow />}

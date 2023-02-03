@@ -8,11 +8,7 @@ export default function Map(props) {
 
   const show = useRef()
 
-  if (props.show) {
-    show.current='show'
-  } else {
-    show.current=' '
-  }
+  props.show ? show.current = "show" : show.current = " ";  /* check class */ 
 
   const occupiedTerritory = "#EBEBEB";
   const defaultTerritory = "#F1F0FF";

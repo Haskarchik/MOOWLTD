@@ -18,11 +18,8 @@ export default function Statistik(props) {
 
   const show = useRef();
 
-  if (props.show) {  /* check class  */
-    show.current = "show";
-  } else {
-    show.current = " ";
-  }
+  props.show ? show.current = "show" : show.current = " ";  /* check class */ 
+  
   return (
     <section className={"statistics " + show.current}> {/* adding class show */}
       <div className="wrapper">
