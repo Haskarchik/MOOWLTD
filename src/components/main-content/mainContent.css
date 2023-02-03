@@ -2,14 +2,6 @@
   margin-top: 50px;
   margin-bottom: 30px;
   padding: 0px 50px;
-  opacity: 0.2;
-  position: relative;
-  top: 150px;
-}
-.advantages.show {
-  transition: 0.5s;
-  opacity: 1;
-  top: 0px;
 }
 
 .wrapper {
@@ -618,7 +610,7 @@
 
 .map_active_block {
   position: absolute;
-  width: 260px;
+  width: 270px;
   max-height: 93px;
   transition: 0.3s;
   background: #fefefe;
@@ -1212,13 +1204,6 @@
   line-height: 20px;
   color: #f1f0ff;
 }
-.question_buttons .go_faq:hover {
-  transition: 0.5s;
-  position: relative;
-  background-color: #665cd1;
-  top: 1px;
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-}
 .question_buttons .go_bot {
   font-family: "Mulish";
   font-style: normal;
@@ -1230,13 +1215,6 @@
   background: #665cd1;
   box-shadow: 0px 4px 10px rgba(111, 98, 228, 0.945);
   border-radius: 45px;
-}
-.question_buttons .go_bot:hover {
-  transition: 0.5s;
-  position: relative;
-  background-color: #665cd1;
-  top: 1px;
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
 }
 
 .question_text {
@@ -1311,13 +1289,6 @@
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
 }
-.app_or_web_buttot_web a:hover {
-  transition: 0.5s;
-  position: relative;
-  background-color: #665cd1;
-  top: 1px;
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-}
 
 .app_or_web_app {
   width: 675px;
@@ -1336,11 +1307,4 @@
   background: #171717;
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
-}
-.app_or_web_app .app_or_web_buttot_app:hover {
-  transition: 0.5s;
-  position: relative;
-  background-color: #665cd1;
-  top: 1px;
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
 }

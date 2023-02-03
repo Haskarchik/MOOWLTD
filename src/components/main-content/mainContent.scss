@@ -5,7 +5,6 @@
   font-size: $size;
   line-height: $lineHeight;
 }
-
 %buttonAnimation {
   &:hover {
     transition: 0.5s;
@@ -15,23 +14,11 @@
     box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
   }
 }
-
-%showSeaction {
-  &.show {
-    transition: 0.5s;
-    opacity: 1;
-    top: 0px;
-  }
-}
-
 .advantages {
   margin-top: 50px;
   margin-bottom: 30px;
   padding: 0px 50px;
-  opacity: 0.2;
-  position: relative;
-  top: 150px;
-  @extend showSeaction;
+  
 }
 .wrapper {
   max-width: 1180px;
@@ -260,7 +247,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 .exist_content {
   max-width: 1170px;
@@ -400,7 +391,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 .statistik_label {
   margin-bottom: 20px;
@@ -471,7 +466,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 
 .map_label {
@@ -486,7 +485,7 @@
 }
 .map_active_block {
   position: absolute;
-  width: 260px;
+  width: 270px;
   max-height: 93px;
   transition: 0.3s;
   background: #fefefe;
@@ -531,7 +530,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 .about_content {
   display: flex;
@@ -558,7 +561,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 
 .swiper_slide {
@@ -702,7 +709,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 .registration_content {
   display: flex;
@@ -744,7 +755,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 .eazy_content {
   display: flex;
@@ -799,7 +814,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 .driver_all_contetn {
   background-image: url(/public/image/driver-back.png);
@@ -888,7 +907,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 .question_content {
   text-align: center;
@@ -921,8 +944,7 @@
     padding: 10px 15px;
     @include fontStyle(16px, 20px);
     color: #f1f0ff;
-
-    @extend buttonAnimation;
+    @extend buttonAnimation !optional
   }
   .go_bot {
     @include fontStyle(16px, 20px);
@@ -931,7 +953,7 @@
     background: #665cd1;
     box-shadow: 0px 4px 10px rgba(111, 98, 228, 0.945);
     border-radius: 45px;
-    @extend buttonAnimation;
+    @extend buttonAnimation !optional
   }
 }
 .question_text {
@@ -947,7 +969,11 @@
   opacity: 0.2;
   position: relative;
   top: 150px;
-  @extend showSeaction;
+  &.show {
+    transition: 0.5s;
+    opacity: 1;
+    top: 0px;
+  }
 }
 .app_or_web_contet {
   display: flex;
@@ -982,7 +1008,7 @@
     background: #665cd1;
     box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
     border-radius: 45px;
-    @extend buttonAnimation;
+    @extend buttonAnimation !optional
   }
 }
 .app_or_web_app {
@@ -998,7 +1024,6 @@
     background: #171717;
     box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
     border-radius: 45px;
-
-    @extend buttonAnimation;
+    @extend buttonAnimation !optional
   }
 }

@@ -4,6 +4,7 @@ import Map from "./Map";
 import "../mainContent.css";
 
 export default function Statistik(props) {
+  
   const [scroll, setscroll] = useState(0);
 
   useEffect(() => {
