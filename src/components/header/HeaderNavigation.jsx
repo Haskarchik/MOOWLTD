@@ -7,7 +7,8 @@ const HeaderNavigation = () => {
   const { t, i18n } = useTranslation();
 
   function setUaLanguages() {
-    document.querySelector(".App").classList.add("translation");
+    if (lang !== 'Укр') {
+      document.querySelector(".App").classList.add("translation");
     setTimeout(() => {
       i18n.changeLanguage("ua");
       setTimeout(() => {
@@ -15,16 +16,19 @@ const HeaderNavigation = () => {
       }, 100);
     }, 200);
     setLang("Укр");
+    }
   }
   function setEngLanguages() {
-    document.querySelector(".App").classList.add("translation");
-    setTimeout(() => {
-      i18n.changeLanguage("eng");
+    if (lang !== 'Eng') {
+      document.querySelector(".App").classList.add("translation");
       setTimeout(() => {
-        document.querySelector(".App").classList.remove("translation");
-      }, 100);
-    }, 200);
-    setLang("Eng");
+        i18n.changeLanguage("eng");
+        setTimeout(() => {
+          document.querySelector(".App").classList.remove("translation");
+        }, 100);
+      }, 200);
+      setLang("Eng");
+    }
   }
 
   function languages() {
