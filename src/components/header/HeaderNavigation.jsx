@@ -7,19 +7,19 @@ const HeaderNavigation = () => {
   const { t, i18n } = useTranslation();
 
   function setUaLanguages() {
-    if (lang !== 'Укр') {
+    if (lang !== "Укр") {
       document.querySelector(".App").classList.add("translation");
-    setTimeout(() => {
-      i18n.changeLanguage("ua");
       setTimeout(() => {
-        document.querySelector(".App").classList.remove("translation");
-      }, 100);
-    }, 200);
-    setLang("Укр");
+        i18n.changeLanguage("ua");
+        setTimeout(() => {
+          document.querySelector(".App").classList.remove("translation");
+        }, 100);
+      }, 200);
+      setLang("Укр");
     }
   }
   function setEngLanguages() {
-    if (lang !== 'Eng') {
+    if (lang !== "Eng") {
       document.querySelector(".App").classList.add("translation");
       setTimeout(() => {
         i18n.changeLanguage("eng");
@@ -42,7 +42,7 @@ const HeaderNavigation = () => {
           <a href="#">
             <img
               className="header_logo"
-              src="/image/icons/logo.png"
+              src="/image/icons/Logo.svg"
               alt="Logo"
             />
           </a>
@@ -60,23 +60,20 @@ const HeaderNavigation = () => {
           </a>
         </ul>
 
-        <a href="#" className="header_button">{t("nav_button")}</a>
+        <a href="#" className="header_button">
+          {t("nav_button")}
+        </a>
 
         <div
           className={
-            langOpen
-              ? "header_nav_languages_active"
-              : "header_nav_languages"
+            langOpen ? "header_nav_languages_active" : "header_nav_languages"
           }
           onClick={languages}
         >
           {lang}
           {langOpen && (
             <div className="header_nav_languages_block">
-              <div
-                className="header_nav_languages_ua"
-                onClick={setUaLanguages}
-              >
+              <div className="header_nav_languages_ua" onClick={setUaLanguages}>
                 Укр
               </div>
               <div
