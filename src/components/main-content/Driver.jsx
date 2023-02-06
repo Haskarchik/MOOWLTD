@@ -1,17 +1,16 @@
 import React, { useRef } from "react";
 
 export default function Driver(props) {
-
   const show = useRef();
 
-  props.show ? show.current = "show" : show.current = " ";  /* check class */ 
+  props.show ? (show.current = "show") : (show.current = " "); /* check class */
 
   return (
     <section className={"driver " + show.current}>  {/* adding class show */}
       <div className="wrapper">
         <div className="driver_all_contetn">
           <div className="driver_title">
-            <img src="/image/icons/Logo-driver.png" alt=" Driver Logo" />
+            <img src="/image/icons/Logo-driver.svg" alt=" Driver Logo" />
           </div>
           <div className="driver_content">
             <div className="driver_info">
