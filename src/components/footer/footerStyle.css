@@ -59,6 +59,10 @@
   text-shadow: 1px 1px 1px rgba(156, 156, 156, 0.349);
   color: #383737;
 }
+.footet_pages li:active {
+  text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.349);
+  color: #252525;
+}
 
 .footer_contacts {
   display: flex;
@@ -103,6 +107,10 @@
   text-shadow: 1px 1px 1px rgba(156, 156, 156, 0.349);
   color: #383737;
 }
+.footer_contacts .footer_contacts_list li:active {
+  text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.349);
+  color: #252525;
+}
 
 .footer_socials {
   display: flex;
@@ -143,6 +151,9 @@
 .footer_socials .socials .facebook:hover {
   box-shadow: 1px 1px 5px #665cd1;
 }
+.footer_socials .socials .facebook:active {
+  background-color: #e2dffc;
+}
 .footer_socials .socials .instagram {
   border-radius: 50%;
   margin-right: 12px;
@@ -150,11 +161,17 @@
 .footer_socials .socials .instagram:hover {
   box-shadow: 1px 1px 5px #665cd1;
 }
+.footer_socials .socials .instagram:active {
+  background-color: #e2dffc;
+}
 .footer_socials .socials .youtube {
   border-radius: 50%;
 }
 .footer_socials .socials .youtube:hover {
   box-shadow: 1px 1px 5px #665cd1;
+}
+.footer_socials .socials .youtube:active {
+  background-color: #e2dffc;
 }
 
 .footer_documents {
@@ -201,6 +218,33 @@
 
 .footer_app_or_web_buttons {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.google_play {
+  background-image: url(/public/image/icons/google-play.png);
+  width: 113px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 45px;
+}
+.google_play:hover {
+  box-shadow: 1px 2px 20px rgba(56, 0, 88, 0.363);
+}
+
+.app_store {
+  background-image: url(/public/image/icons/app-store.png);
+  width: 110px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.app_store:hover {
+  box-shadow: 1px 2px 20px rgba(56, 0, 88, 0.363);
 }
 
 .footer_app_or_web_subtitle {
@@ -230,7 +274,11 @@
   position: relative;
   background-color: #665cd1;
   top: 1px;
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+}
+.footer_web_button:active {
+  background-color: #47418b;
+  box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
 }
 
 .copyright {

@@ -1,16 +1,14 @@
 import React from "react";
-import headerStyle from "../header/header.module.css";
 import HeaderNavigation from "./HeaderNavigation";
 import HederContent from "./HederContent";
+import './header.css'
 
 const Header = () => {
   return (
-    <header className={headerStyle.header}>
-      <div className="wrapper">
-        <div className={headerStyle.wrapper}>
+    <header className="header_header">
+      <div className="header_wrapper">
           <HeaderNavigation />
           <HederContent />
-        </div>
       </div>
     </header>
   );

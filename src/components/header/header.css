@@ -1,38 +1,38 @@
-.header {
+.header_header {
   color: white;
-  background-image: url(/public/image/header-bak.png);
+  background-image: url(/public/image/header-back.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.wrapper {
+.header_wrapper {
   max-width: 1280px;
   margin: auto;
   padding: 25px 30px 25px 25px;
 }
 
-.logo {
+.header_logo {
   width: 90px;
   height: 20px;
 }
 
-.navigation {
+.header_navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 180px;
 }
 
-.nav_list {
+.header_nav_list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav_list a {
+.header_nav_list a {
   color: white;
   text-decoration: none;
 }
-.nav_list li {
+.header_nav_list li {
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
@@ -44,11 +44,16 @@
   border-radius: 45px;
   transition: 0.3s;
 }
-.nav_list li:hover {
+.header_nav_list li:hover {
   background-color: #665cd1;
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+}
+.header_nav_list li:active {
+  background-color: #47418b;
+  box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
 }
 
-.button {
+.header_button {
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
@@ -59,16 +64,21 @@
   background: #665cd1;
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
+  min-width: 200px;
 }
-.button:hover {
+.header_button:hover {
   transition: 0.5s all;
   position: relative;
   background-color: #665cd1;
   top: 1px;
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+}
+.header_button:active {
+  background-color: #47418b;
+  box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
 }
 
-.nav_languages {
+.header_nav_languages {
   cursor: pointer;
   font-family: "Mulish";
   font-style: normal;
@@ -81,7 +91,7 @@
   padding: 7px 15px;
   position: relative;
 }
-.nav_languages::after, .nav_languages::before {
+.header_nav_languages::after, .header_nav_languages::before {
   content: "";
   height: 1px;
   width: 5px;
@@ -90,16 +100,16 @@
   transition: 0.3s;
   top: 18px;
 }
-.nav_languages::after {
+.header_nav_languages::after {
   left: 50px;
   transform: rotate(-45deg);
 }
-.nav_languages::before {
+.header_nav_languages::before {
   left: 47px;
   transform: rotate(45deg);
 }
 
-.nav_languages_active {
+.header_nav_languages_active {
   cursor: pointer;
   font-family: "Mulish";
   font-style: normal;
@@ -113,7 +123,7 @@
   background-color: #665cd1;
   position: relative;
 }
-.nav_languages_active::after, .nav_languages_active::before {
+.header_nav_languages_active::after, .header_nav_languages_active::before {
   content: "";
   height: 1px;
   width: 5px;
@@ -122,17 +132,17 @@
   transition: 0.3s;
   top: 18px;
 }
-.nav_languages_active::after {
+.header_nav_languages_active::after {
   left: 50px;
   transition: 0.3s;
   transform: rotate(45deg);
 }
-.nav_languages_active::before {
+.header_nav_languages_active::before {
   left: 47px;
   transition: 0.3s;
   transform: rotate(-45deg);
 }
-.nav_languages_active .nav_languages_block {
+.header_nav_languages_active .header_nav_languages_block {
   border-radius: 15px;
   transition: 0.5s;
   position: absolute;
@@ -141,47 +151,56 @@
   background-color: #665cd1;
 }
 
-.nav_languages_ua {
+.header_nav_languages_ua {
   border-radius: 15px;
   padding: 7px 15px;
   border-bottom: 1px solid grey;
 }
-.nav_languages_ua:hover {
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.336);
+.header_nav_languages_ua:hover {
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+}
+.header_nav_languages_ua:active {
+  background-color: #47418b;
+  box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
 }
 
-.nav_languages_eng {
+.header_nav_languages_eng {
   border-radius: 15px;
   padding: 7px 15px;
   border-bottom: 1px solid grey;
 }
-.nav_languages_eng:hover {
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.336);
+.header_nav_languages_eng:hover {
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+}
+.header_nav_languages_eng:active {
+  background-color: #47418b;
+  box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
 }
 
-.seaction {
+.header_seaction {
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
+  transition: 0.2s;
 }
-.seaction .title {
+.header_seaction .header_title {
   max-width: 510px;
   margin-bottom: 115px;
 }
-.seaction p {
+.header_seaction p {
   margin-top: 15px;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
 }
-.seaction .seaction_buttons {
+.header_seaction .header_seaction_buttons {
   display: flex;
   transition: 0.5s all;
   margin-bottom: 180px;
 }
-.seaction .header_button {
+.header_seaction .header_header_button {
   text-align: center;
   font-family: "Mulish";
   font-style: normal;
@@ -197,43 +216,47 @@
   transition: 0.5s all;
   position: relative;
 }
-.seaction .header_button::after, .seaction .header_button::before {
+.header_seaction .header_header_button::after, .header_seaction .header_header_button::before {
   content: "";
-  transition: 0.3s all;
-  height: 1.2px;
+  transition: 0.3s;
+  height: 1.5px;
   width: 7px;
   background-color: white;
   position: absolute;
   top: 20px;
 }
-.seaction .header_button::after {
+.header_seaction .header_header_button::after {
   top: 17px;
   left: 204px;
   transform: rotate(45deg);
 }
-.seaction .header_button::before {
+.header_seaction .header_header_button::before {
   top: 22px;
   left: 204px;
   transform: rotate(-45deg);
 }
-.seaction .header_button:hover {
+.header_seaction .header_header_button:hover {
   transition: 0.5s all;
   position: relative;
   background-color: #665cd1;
   top: 1px;
-  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
 }
-.seaction .header_button:hover::after {
+.header_seaction .header_header_button:hover:active {
+  background-color: #47418b;
+  box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
+}
+.header_seaction .header_header_button:hover::after {
   top: 17px;
   left: 208px;
   transform: rotate(45deg);
 }
-.seaction .header_button:hover::before {
+.header_seaction .header_header_button:hover::before {
   top: 22px;
   left: 208px;
   transform: rotate(-45deg);
 }
-.seaction .header_black_button {
+.header_seaction .header_header_black_button {
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
@@ -246,9 +269,13 @@
   border-radius: 45px;
   transition: 0.5s all;
 }
-.seaction .header_black_button:hover {
+.header_seaction .header_header_black_button:hover {
   position: relative;
   background-color: #665cd1;
   top: 1px;
-  box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.445);
+  box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+}
+.header_seaction .header_header_black_button:active {
+  background-color: #47418b;
+  box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
 }

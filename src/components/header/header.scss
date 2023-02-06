@@ -6,28 +6,28 @@
   line-height: $lineHeight;
 }
 
-.header {
+.header_header {
   color: white;
-  background-image: url(/public/image/header-bak.png);
+  background-image: url(/public/image/header-back.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-.wrapper {
+.header_wrapper {
   max-width: 1280px;
   margin: auto;
   padding: 25px 30px 25px 25px;
 }
-.logo {
+.header_logo {
   width: 90px;
   height: 20px;
 }
-.navigation {
+.header_navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 180px;
 }
-.nav_list {
+.header_nav_list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,25 +44,35 @@
     transition: 0.3s;
     &:hover {
       background-color: #665cd1;
+      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+    }
+    &:active {
+      background-color: #47418b;
+      box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
     }
   }
 }
-.button {
+.header_button {
   @include fontStyle(16px, 20px);
   padding: 10px 15px;
   color: white;
   background: #665cd1;
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
   border-radius: 45px;
+  min-width: 200px;
   &:hover {
     transition: 0.5s all;
     position: relative;
     background-color: #665cd1;
     top: 1px;
-    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+  }
+  &:active {
+    background-color: #47418b;
+    box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
   }
 }
-.nav_languages {
+.header_nav_languages {
   cursor: pointer;
   @include fontStyle(16px, 20px);
   position: relative;
@@ -89,7 +99,7 @@
   }
   position: relative;
 }
-.nav_languages_active {
+.header_nav_languages_active {
   cursor: pointer;
   font-family: "Mulish";
   font-style: normal;
@@ -121,7 +131,7 @@
     transition: 0.3s;
     transform: rotate(-45deg);
   }
-  .nav_languages_block {
+  .header_nav_languages_block {
     border-radius: 15px;
     transition: 0.5s;
     position: absolute;
@@ -129,29 +139,39 @@
     left: 0px;
     background-color: #665cd1;
   }
+
   position: relative;
 }
 
-.nav_languages_ua {
+.header_nav_languages_ua {
   border-radius: 15px;
   padding: 7px 15px;
   border-bottom: 1px solid grey;
   &:hover {
-    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.336);
+    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+  }
+  &:active {
+    background-color: #47418b;
+    box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
   }
 }
-.nav_languages_eng {
+.header_nav_languages_eng {
   border-radius: 15px;
   padding: 7px 15px;
   border-bottom: 1px solid grey;
   &:hover {
-    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.336);
+    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+  }
+  &:active {
+    background-color: #47418b;
+    box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
   }
 }
 
-.seaction {
-  @include fontStyle(32px,40px);
-  .title {
+.header_seaction {
+  @include fontStyle(32px, 40px);
+  transition: 0.2s;
+  .header_title {
     max-width: 510px;
     margin-bottom: 115px;
   }
@@ -161,14 +181,15 @@
     font-size: 24px;
     line-height: 30px;
   }
-  .seaction_buttons {
+  .header_seaction_buttons {
     display: flex;
     transition: 0.5s all;
     margin-bottom: 180px;
   }
-  .header_button {
+
+  .header_header_button {
     text-align: center;
-    @include fontStyle(16px,20px);
+    @include fontStyle(16px, 20px);
     padding: 10px 40px 10px 15px;
     color: white;
     background: #665cd1;
@@ -180,8 +201,8 @@
     &::after,
     &::before {
       content: "";
-      transition: 0.3s all;
-      height: 1.2px;
+      transition: 0.3s;
+      height: 1.5px;
       width: 7px;
       background-color: white;
       position: absolute;
@@ -203,7 +224,12 @@
       position: relative;
       background-color: #665cd1;
       top: 1px;
-      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+
+      &:active {
+        background-color: #47418b;
+        box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
+      }
       &::after {
         top: 17px;
         left: 208px;
@@ -216,8 +242,8 @@
       }
     }
   }
-  .header_black_button {
-    @include fontStyle(16px,20px);
+  .header_header_black_button {
+    @include fontStyle(16px, 20px);
     color: #f1f0ff;
     padding: 10px 15px;
     background: #171717;
@@ -228,7 +254,11 @@
       position: relative;
       background-color: #665cd1;
       top: 1px;
-      box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.445);
+      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+    }
+    &:active {
+      background-color: #47418b;
+      box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
     }
   }
 }

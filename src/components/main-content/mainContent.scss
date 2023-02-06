@@ -5,29 +5,23 @@
   font-size: $size;
   line-height: $lineHeight;
 }
-%buttonAnimation {
-  &:hover {
-    transition: 0.5s;
-    position: relative;
-    background-color: #665cd1;
-    top: 1px;
-    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
-  }
-}
 .advantages {
   margin-top: 50px;
   margin-bottom: 30px;
   padding: 0px 50px;
-  
 }
+
 .wrapper {
   max-width: 1180px;
   margin: auto;
+ 
 }
 .title {
   @include fontStyle(24px, 30px);
   color: #665cd1;
   margin-bottom: 20px;
+  transition: 0.3s;
+
 }
 
 .advantages_content {
@@ -235,9 +229,16 @@
   color: #262626;
 }
 .ad_card_text {
+  transition: 0.3s;
   @include fontStyle(16px, 20px);
   font-weight: 500;
   color: #262626;
+  &.translation{
+    transition: 0.3s;
+    font-size: 5px;
+    opacity: 0.1;
+    
+  }
 }
 ////////For whom we exist//////////////////////////////
 .exist {
@@ -348,12 +349,17 @@
   border-radius: 45px;
   margin: 20px 0px;
   transition: 1s;
+
   &:hover {
     transition: 1s;
     position: relative;
     background-color: #665cd1;
     top: 1px;
-    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+  }
+  &:active{
+    background-color: #47418b;
+    box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
   }
 }
 .ofer_download_buttons {
@@ -372,16 +378,25 @@
   &:hover {
     box-shadow: 1px 2px 20px rgba(56, 0, 88, 0.363);
   }
+
+  &:active{
+ border: 2px solid rgba(63, 0, 179, 0.74);
+ border-radius: 4px;
+  }
 }
 .app_store {
   background-image: url(/public/image/icons/app-store.png);
-  width: 113px;
+  width: 110px;
   height: 33px;
   background-repeat: no-repeat;
   background-position: center;
   &:hover {
     box-shadow: 1px 2px 20px rgba(56, 0, 88, 0.363);
   }
+  &:active{
+    border: 2px solid rgba(63, 0, 179, 0.74);
+    border-radius: 4px;
+     }
 }
 
 ////////Statistics//////////////////////////////
@@ -508,13 +523,19 @@
   padding: 10px 15px;
   background: #665cd1;
   box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
-  border-radius: 45px;
+  transition: 0.3s;
+    border-radius: 45px;
+
   &:hover {
-    transition: 1s;
+    
     position: relative;
     background-color: #665cd1;
     top: 1px;
-    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.589);
+    box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+  }
+  &:active{
+    background-color: #47418b;
+    box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
   }
 }
 ////////AboutMoow//////////////////////////////
@@ -938,7 +959,17 @@
     padding: 10px 15px;
     @include fontStyle(16px, 20px);
     color: #f1f0ff;
-    @extend buttonAnimation !optional
+    &:hover {
+      transition: 0.5s;
+      position: relative;
+      background-color: #665cd1;
+      top: 1px;
+      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+    }
+    &:active{
+      background-color: #47418b;
+      box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
+    }
   }
   .go_bot {
     @include fontStyle(16px, 20px);
@@ -947,7 +978,17 @@
     background: #665cd1;
     box-shadow: 0px 4px 10px rgba(111, 98, 228, 0.945);
     border-radius: 45px;
-    @extend buttonAnimation !optional
+    &:hover {
+      transition: 0.5s;
+      position: relative;
+      background-color: #665cd1;
+      top: 1px;
+      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+    }
+    &:active{
+      background-color: #47418b;
+      box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
+    }
   }
 }
 .question_text {
@@ -1002,7 +1043,17 @@
     background: #665cd1;
     box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
     border-radius: 45px;
-    @extend buttonAnimation !optional
+    &:hover {
+      transition: 0.5s;
+      position: relative;
+      background-color: #665cd1;
+      top: 1px;
+      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+    }
+    &:active{
+      background-color: #47418b;
+      box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
+    }
   }
 }
 .app_or_web_app {
@@ -1018,6 +1069,16 @@
     background: #171717;
     box-shadow: 0px 4px 10px rgba(110, 98, 228, 0.26);
     border-radius: 45px;
-    @extend buttonAnimation !optional
+    &:hover {
+      transition: 0.5s;
+      position: relative;
+      background-color: #665cd1;
+      top: 1px;
+      box-shadow: inset 1px 2px 25px rgba(0, 0, 0, 0.404);
+    }
+    &:active{
+      background-color: #47418b;
+      box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.589);
+    }
   }
 }

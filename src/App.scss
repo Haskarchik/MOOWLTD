@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+section,
+div {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@mixin anim_translation() {
+  transition: 0.2s;
+  font-size: 10px;
+  opacity: 0.2;
+}
+.App {
+  &.translation {
+    .header_header {
+      .header_nav_list {
+        height: 26px;
+        li {
+          @include anim_translation();
+        }
+      }
+      .header_button {
+        @include anim_translation();
+      }
+      .header_seaction {
+        transition: 0.3s;
+      }
+      .header_title {
+        height: 155px;
+        transition: 0.2s;
+        font-size: 8px;
+        opacity: 0.2;
+        h2 {
+          transition: 1s;
+        }
+        p {
+          transition: 1s;
+          font-size: 8px;
+        }
+      }
+      .header_header_button {
+        @include anim_translation();
+        &::after {
+          transition: 0.4s;
+          left: 150px;
+        }
+        &::before {
+          transition: 0.4s;
+          left: 150px;
+        }
+      }
+      .header_header_black_button {
+        @include anim_translation();
+      }
+    }
+
+    .title {
+      transition: 0.2s;
+      font-size: 10px;
+      opacity: 0.2;
+    }
+    .advantages {
+      .ad_card_label {
+        transition: 0.2s;
+        font-size: 10px;
+        opacity: 0.2;
+      }
+      .ad_card_text {
+        transition: 0.2s;
+        font-size: 10px;
+        opacity: 0.2;
+      }
+    }
+  }
+}

@@ -65,13 +65,13 @@ const Footer = () => {
               Встанови безкоштовний додаток на смартфон
             </div>
             <div className="footer_app_or_web_buttons">
-              <a href="#">
-                <img src="/image/icons/google-play.png" alt="googl play" />
-              </a>
-              <a href="#">
-                <img src="/image/icons/app-store.png" alt="app store" />
-              </a>
-            </div>
+                <a href="#">   {/* button  */}
+                  <div className="google_play"></div>
+                </a>
+                <a href="#">   {/* button  */}
+                  <div className="app_store"></div>
+                </a>
+              </div>
             <div className="footer_app_or_web_subtitle">
               Або почни працювати з браузеру
             </div>

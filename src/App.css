@@ -1,6 +1,6 @@
 @charset "UTF-8";
-
 /*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +10,6 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -88,10 +87,71 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
 section,
 div {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+.App.translation .header_header .header_nav_list {
+  height: 26px;
+}
+.App.translation .header_header .header_nav_list li {
+  transition: 0.2s;
+  font-size: 10px;
+  opacity: 0.2;
+}
+.App.translation .header_header .header_button {
+  transition: 0.2s;
+  font-size: 10px;
+  opacity: 0.2;
+}
+.App.translation .header_header .header_seaction {
+  transition: 0.3s;
+}
+.App.translation .header_header .header_title {
+  height: 155px;
+  transition: 0.2s;
+  font-size: 8px;
+  opacity: 0.2;
+}
+.App.translation .header_header .header_title h2 {
+  transition: 1s;
+}
+.App.translation .header_header .header_title p {
+  transition: 1s;
+  font-size: 8px;
+}
+.App.translation .header_header .header_header_button {
+  transition: 0.2s;
+  font-size: 10px;
+  opacity: 0.2;
+}
+.App.translation .header_header .header_header_button::after {
+  transition: 0.4s;
+  left: 150px;
+}
+.App.translation .header_header .header_header_button::before {
+  transition: 0.4s;
+  left: 150px;
+}
+.App.translation .header_header .header_header_black_button {
+  transition: 0.2s;
+  font-size: 10px;
+  opacity: 0.2;
+}
+.App.translation .title {
+  transition: 0.2s;
+  font-size: 10px;
+  opacity: 0.2;
+}
+.App.translation .advantages .ad_card_label {
+  transition: 0.2s;
+  font-size: 10px;
+  opacity: 0.2;
+}
+.App.translation .advantages .ad_card_text {
+  transition: 0.2s;
+  font-size: 10px;
+  opacity: 0.2;
+}
