@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function AboutMoow(props) {
+  const { t, i18n } = useTranslation();
 
   const show = useRef();
 
@@ -9,7 +11,7 @@ export default function AboutMoow(props) {
   return (
     <section className={"about " + show.current}>  {/* adding class show */}
       <div className="wrapper">
-        <div className="title">Про MOOW за 2 хвилини</div>
+        <div className="title">{t("about_title")}</div>
         <div className="about_content">
           <div className="exist_left_words"> {/* Vertical column with words */}
             <div className="m"></div>

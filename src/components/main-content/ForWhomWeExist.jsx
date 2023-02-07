@@ -1,9 +1,12 @@
 import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import "./mainContent.css";
 
 export default function (props) {
 
   const show = useRef();
+  const { t, i18n } = useTranslation();
+ 
 
   props.show ? show.current = "show" : show.current = " ";  /* check class */ 
 
@@ -12,13 +15,13 @@ export default function (props) {
       <div className="wrapper">
         <div className="exist_content">
           <div className="exist_left_part">
-            <div className="exist_title title">Для кого ми існуємо</div>
+            <div className="exist_title title">{t("exist_title")}</div>
             <ul className="exist_list">
-              <li>Для користувачів із різних сфер бізнесу.</li>
-              <li>Для оптових та роздрібних покупців та продавців.</li>
-              <li>Для дрібного та середнього бізнесу.</li>
-              <li>Для фермера, водія трактора та великих виробників.</li>
-              <li>Для тих, хто цінує час та прибуток.</li>
+              <li>{t("exist_list_1")}</li>
+              <li>{t("exist_list_2")}</li>
+              <li>{t("exist_list_3")}</li>
+              <li>{t("exist_list_4")}</li>
+              <li>{t("exist_list_5")}</li>
             </ul>
           </div>
           <div className="exist_right_part">
@@ -34,11 +37,14 @@ export default function (props) {
             </div>
             <div className="exist_offer">
               <div className="offer_title">
-                Спробуй прямо зараз через браузер!
+              {t("exist_offer_title")}
+                
               </div>
-              <button className=" offer_button">Перейти до веб-версії </button>
+              <button className=" offer_button">
+              {t("exist_offer_button")} </button>
               <div className="offer_title">
-                Або завантажуй та спробуй з смартфону
+              {t("exist_offer_subtitle")}
+                
               </div>
               <div className="ofer_download_buttons">
                 <a href="#">   {/* button  */}

@@ -5,8 +5,10 @@ import { Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/autoplay";
+import { useTranslation } from "react-i18next";
 
 export default function (props) {
+  const { t, i18n } = useTranslation  ();
 
   const show = useRef();
   const slidesFirstGroup = useRef();
@@ -376,7 +378,7 @@ export default function (props) {
   return (
     <section className={"discounts " + show.current}>  {/* adding class show */}
       <div className="wrapper">
-        <div className="title">Знижка на послуги MOOW до 12.12</div>
+        <div className="title">{t("discount_title")}  </div>
         <div className="discounts_content">
           <Swiper
             modules={[Autoplay]}
