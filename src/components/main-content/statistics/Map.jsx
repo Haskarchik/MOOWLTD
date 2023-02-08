@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import Info from "./Info";
 
 export default function Map(props) {
+  const { t, i18n } = useTranslation();
 
   const [InfoBlok, setInfoBlok] = useState();
 
@@ -388,7 +390,7 @@ export default function Map(props) {
   return (
     <div className={"map " + show.current}> 
       <div className="map_label">
-        Наведіть на потрібну область, щоб побачити дані
+      {t("map_label")}  
       </div>
       <div className="active_map">
         {ukraine}
@@ -396,7 +398,8 @@ export default function Map(props) {
       </div>
       <div>
         <a href="#" className="map_button button">
-          Більше статистики від MOOW
+      {t("map_button")}  
+          
         </a>
       </div>
       {InfoBlok}

@@ -3,8 +3,11 @@ import Map from "./Map";
 import { agronomicStatistics } from "../../../data/agronomicStatistics";
 
 import "../mainContent.css";
+import { useTranslation } from "react-i18next";
 
 export default function Statistik(props) {
+    const { t, i18n } = useTranslation();
+
   function displayTopFiveCropCapacity() {
     let list = [];
 
@@ -17,12 +20,19 @@ export default function Statistik(props) {
       }
       return 0;
     });
+    function langChose(i){
+      if (i18n.language === 'eng') {
+        return array[i].engName
+      }else{
+      return array[i].name
+      }
+    }
 
     for (let i = 0; i < 5; i++) {
       list.push(
         <li>
           <span>{i + 1}</span>
-          {array[i].name} - {array[i].cropCapacity}
+          {langChose(i)} - {array[i].cropCapacity}
         </li>
       );
     }
@@ -40,11 +50,18 @@ export default function Statistik(props) {
       }
       return 0;
     });
+    function langChose(i){
+      if (i18n.language === 'eng') {
+        return array[i].engName
+      }else{
+      return array[i].name
+      }
+    }
     for (let i = 0; i < 5; i++) {
       list.push(
         <li>
           <span>{i + 1}</span>
-          {array[i].name} - {array[i].collectedArea}
+          {langChose(i)} - {array[i].collectedArea}
         </li>
       );
     }
@@ -63,11 +80,18 @@ export default function Statistik(props) {
       }
       return 0;
     });
+    function langChose(i){
+      if (i18n.language === 'eng') {
+        return array[i].engName
+      }else{
+      return array[i].name
+      }
+    }
     for (let i = 0; i < 5; i++) {
       list.push(
         <li>
           <span>{i + 1}</span>
-          {array[i].name} - {array[i].ProductionVolumes}
+          {langChose(i)} - {array[i].ProductionVolumes}
         </li>
       );
     }
@@ -92,44 +116,42 @@ export default function Statistik(props) {
   return (
     <section className={"statistics " + show.current}>  {/* adding class show */}
       <div className="wrapper">
-        <div className="title">Наша статистика показує</div>
+        <div className="title">{t("statistic_title")}</div>
         <div className="statistic_content">
           <div className="statistik_label">
-            <h2> Збір урожаю соняшнику на 01 грудня 2021р. Топ-5 областей</h2>
+            <h2>{t("statistik_label_h")} </h2>
             <p>
-              Дані наведено без урахування тимчасово окупованої території
-              Автономної Республіки Крим, м. Севастополя та частини тимчасово
-              окупованих територій у Донецькій та Луганській областях
+            {t("statistik_label_p")}
             </p>
           </div>
           <div className="statistic_info">
             <div className="statistic_card">
-              <div className="stat_card_label">Зібрана площа (тис. га.)</div>
+              <div className="stat_card_label">{t("statistik_Harvested_area")}</div>
               <ul className="stat_card_top_list">
                 {displayTopFiveCollectedArea()}
               </ul>
               <div className="stat_card_at_ukraine">
-                По Україні - <span>6 523,9 тис. га.</span>
+              {t("stat_card_at_ukraine")}<span>6 523,9 тис. га.</span>
               </div>
             </div>
             <div className="statistic_card">
-              <div className="stat_card_label">Обсяги виробництва (тис.ц.)</div>
+              <div className="stat_card_label">{t("statistik_Production_volumes")}</div>
               <ul className="stat_card_top_list">
                 {displayTopFiveProductionVolumes()}
               </ul>
               <div className="stat_card_at_ukraine">
-                По Україні - <span>164 398,4 тис. ц.</span>
+              {t("stat_card_at_ukraine")} <span>164 398,4 тис. ц.</span>
               </div>
             </div>
             <div className="statistic_card">
               <div className="stat_card_label">
-                Урожайність (ц. за 1 га. зібраної площі)
+              {t("statistik_Yield")} 
               </div>
               <ul className="stat_card_top_list">
                 {displayTopFiveCropCapacity()}
               </ul>
               <div className="stat_card_at_ukraine">
-                По Україні - <span>25,2 ц. за 1 га. зібраної площі</span>
+              {t("stat_card_at_ukraine")} <span>25,2 ц. за 1 га. зібраної площі</span>
               </div>
             </div>
           </div>
