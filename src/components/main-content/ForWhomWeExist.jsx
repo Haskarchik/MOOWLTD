@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import "./mainContent.css";
 
 export default function (props) {
-
+  const { t, i18n } = useTranslation();
   const show = useRef();
 
   props.show ? show.current = "show" : show.current = " ";  /* check class */ 
@@ -12,7 +13,7 @@ export default function (props) {
       <div className="wrapper">
         <div className="exist_content">
           <div className="exist_left_part">
-            <div className="exist_title title">Для кого ми існуємо</div>
+            <div className="exist_title title">  {t("exist_title")}Для кого ми існуємо</div>
             <ul className="exist_list">
               <li>Для користувачів із різних сфер бізнесу.</li>
               <li>Для оптових та роздрібних покупців та продавців.</li>
